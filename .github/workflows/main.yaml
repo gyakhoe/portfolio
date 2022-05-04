@@ -1,6 +1,6 @@
 name: portfolio
 
-on: [pull_request, push]
+on: []
 
 jobs:
   build:
