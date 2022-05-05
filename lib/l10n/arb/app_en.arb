@@ -3,5 +3,55 @@
     "counterAppBarTitle": "Counter",
     "@counterAppBarTitle": {
         "description": "Text shown in the AppBar of the Counter Page"
+    },
+    "@@locale": "en",
+    "aboutMeDetail": "Hello! My name is Brittany and I enjoy creating things that live on the internet. My interest in web development started back in 2012 when I decided to try editing custom Tumblr themes — turns out hacking together a custom reblog button taught me a lot about HTML & CSS! \n \n Fast-forward to today, and I’ve had the privilege of working at an advertising agency, a start-up, a huge corporation, and a student-led design studio. My main focus these days is building accessible, inclusive products and digital experiences at Upstatement for a variety of clients. \n \n I also recently launched a course that covers everything you need to build a web app with the Spotify API using Node & React. \n \n Here are a few technologies I’ve been working with recently:",
+    "@aboutMeDetail": {
+        "description": "This is about me detail of the website"
+    },
+    "@@locale": "en",
+    "mainDetail": "I’m a software engineer specializing in building (and occasionally designing) exceptional digital experiences. Currently, I’m focused on building accessible, human-centered products at Upstatement.",
+    "@mainDetail": {
+        "description": "This is main detail about me"
+    },
+    "@@locale": "en",
+    "workTitle": "I make mobile, and web applications using Flutter",
+    "@workTitle": {
+        "description": "This is the work title"
+    },
+    "@@locale": "en",
+    "nameTitle": "Gyague Sonam",
+    "@nameTitle": {
+        "description": "This is the name of the owner of portfolio"
+    },
+    "@@locale": "en",
+    "hiTitle": "Hi! my name is ",
+    "@hiTitle": {
+        "description": "Hi text in begining of the page"
+    },
+    "@@locale": "en",
+    "presentExperiance": "2020 - Present. Indie Flutter App developer and making Youtube content.",
+    "@presentExperiance": {
+        "description": "Exp from 2019 to present"
+    },
+    "@@locale": "en",
+    "experiance2019": "2016 - 2019. Senior Project Engineer at Wipro Ltd.",
+    "@experiance2019": {
+        "description": "Exp from 2016 to 2019"
+    },
+    "@@locale": "en",
+    "experiance2016": "2012 - 2016. Project Engineer at Wipro Ltd.",
+    "@experiance2016": {
+        "description": "2012 to 2016 experiances "
+    },
+    "@@locale": "en",
+    "experiance2012": "2009-2012. Bachelors in Computer ApplicationHi! my name is ",
+    "@experiance2012": {
+        "description": "2009 to 2012 experiances"
+    },
+    "@@locale": "en",
+    "experianceTitle": "Where I've worked",
+    "@experianceTitle": {
+        "description": "Title of the experiance page."
     }
 }
