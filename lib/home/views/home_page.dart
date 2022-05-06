@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:portfolio/about/views/about_page.dart';
 import 'package:portfolio/experiance/views/experiance_page.dart';
 import 'package:portfolio/main/views/main_page.dart';
+import 'package:portfolio/work/views/work_page.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({Key? key}) : super(key: key);
@@ -131,9 +132,10 @@ class _HomeView extends StatelessWidget {
           color: Theme.of(context).primaryColorDark,
         ),
         _homeContent(
-          content: const Text('Work'),
+          content: const WorkPage(),
+          height: MediaQuery.of(context).size.height * 2,
           context: context,
-          color: Colors.orange,
+          color: Theme.of(context).primaryColorDark,
         ),
         _homeContent(
           content: const Text('Contatct'),
@@ -148,9 +150,10 @@ class _HomeView extends StatelessWidget {
     required Widget content,
     required BuildContext context,
     required Color color,
+    double? height,
   }) {
     return Container(
-      height: MediaQuery.of(context).size.height,
+      height: height ?? MediaQuery.of(context).size.height,
       width: MediaQuery.of(context).size.width,
       color: color,
       child: Center(

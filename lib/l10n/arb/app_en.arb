@@ -53,5 +53,85 @@
     "experianceTitle": "Where I've worked",
     "@experianceTitle": {
         "description": "Title of the experiance page."
+    },
+    "@@locale": "en",
+    "proejctTitle": "Featured Proejct",
+    "@proejctTitle": {
+        "description": "Text to be dispalyed before the proejct name"
+    },
+    "@@locale": "en",
+    "tibtubeProjectName": "TibTube",
+    "@tibtubeProjectName": {
+        "description": "Name of the tibtube project"
+    },
+    "@@locale": "en",
+    "tibtubeProejctUrl": "www.tibtube.come",
+    "@tibtubeProejctUrl": {
+        "description": "Url of tibtube project"
+    },
+    "@@locale": "en",
+    "tibtubeDetail": "A Flutter Web project that works with Youtube Data API. It fetches data from youtube for the given channel and list them in this web application. User can chossed to watch the video here as well.",
+    "@tibtubeDetail": {
+        "description": "Descrioption about the tibtube project"
+    },
+    "@@locale": "en",
+    "technologiesInProeject": "Technologies : Flutter, dart, Firebase, Youtube Dta API",
+    "@technologiesInProeject": {
+        "description": "Name of the technologies  used in project"
+    },
+    "@@locale": "en",
+    "tibtubeImageUrl": "images/tibtube-profile.png",
+    "@tibtubeImageUrl": {
+        "description": "Image URL of tibtube project"
+    },
+    "@@locale": "en",
+    "youtubeProjectName": "Youtube",
+    "@youtubeProjectName": {
+        "description": "Name of the youtube project"
+    },
+    "@@locale": "en",
+    "youtubeProejctUrl": "www.youtube.come/gyakohe",
+    "@youtubeProejctUrl": {
+        "description": "Url of youtube project"
+    },
+    "@@locale": "en",
+    "youtubeDetail": "I make YouTube tutorial Flutter. At the time of writing this, I've about created 25 videos and gained thousands of watch time.",
+    "@youtubeDetail": {
+        "description": "Descrioption about the youtube project"
+    },
+    "@@locale": "en",
+    "technologiesInProeject": "Technologies : Flutter, dart, Firebase, Youtube Dta API",
+    "@technologiesInProeject": {
+        "description": "Name of the technologies  used in project"
+    },
+    "@@locale": "en",
+    "youtubeImageUrl": "images/youtube-profile.png",
+    "@youtubeImageUrl": {
+        "description": "Image URL of youtube project"
+    }, 
+    "@@locale": "en",
+    "githubProjectName": "github",
+    "@githubProjectName": {
+        "description": "Name of the github project"
+    },
+    "@@locale": "en",
+    "githubProejctUrl": "www.github.come/gyakohe",
+    "@githubProejctUrl": {
+        "description": "Url of github project"
+    },
+    "@@locale": "en",
+    "githubDetail": "I do contribute to opensource community by pushing my code into GitHub. Over the time I've gained over 21 followers and 55 stars. Many have even forked my projects to learn and build something on their own.",
+    "@githubDetail": {
+        "description": "Descrioption about the github project"
+    },
+    "@@locale": "en",
+    "technologiesInProeject": "Technologies : Flutter, dart, Firebase, github Dta API",
+    "@technologiesInProeject": {
+        "description": "Name of the technologies  used in project"
+    },
+    "@@locale": "en",
+    "githubImageUrl": "images/github-profile.png",
+    "@githubImageUrl": {
+        "description": "Image URL of github project"
     }
 }
