@@ -1,4 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:portfolio/about/views/about_page.dart';
+import 'package:portfolio/contact/views/contact_page.dart';
+import 'package:portfolio/experiance/views/experiance_page.dart';
+import 'package:portfolio/main/views/main_page.dart';
+import 'package:portfolio/work/views/work_page.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({Key? key}) : super(key: key);
@@ -22,22 +27,22 @@ class _HomeView extends StatelessWidget {
         Align(
           alignment: Alignment.topCenter,
           child: Container(
-            decoration: const BoxDecoration(
-              boxShadow: [
+            decoration: BoxDecoration(
+              boxShadow: const [
                 BoxShadow(
                   color: Colors.white30,
                   offset: Offset(
                     0,
-                    3,
+                    2,
                   ),
-                  blurRadius: 10,
+                  blurRadius: 2,
                   spreadRadius: 2,
                 ), //BoxShadow
                 BoxShadow(
                   color: Colors.white,
                 ),
               ],
-              color: Colors.amber,
+              color: Theme.of(context).primaryColorDark,
             ),
             height: 100,
             width: MediaQuery.of(context).size.width,
@@ -112,40 +117,49 @@ class _HomeView extends StatelessWidget {
   ListView _homeListView(BuildContext context) {
     return ListView(
       children: [
-        _homeContent(title: 'Main', context: context, color: Colors.blue),
-        _homeContent(title: 'About', context: context, color: Colors.green),
         _homeContent(
-          title: 'Experiance',
+          content: const MainPage(),
           context: context,
-          color: Colors.greenAccent,
+          color: Theme.of(context).primaryColorDark,
         ),
-        _homeContent(title: 'Work', context: context, color: Colors.orange),
         _homeContent(
-          title: 'Contact',
+          content: const AboutPage(),
           context: context,
-          color: Theme.of(context).primaryColorLight,
+          color: Theme.of(context).primaryColorDark,
+        ),
+        _homeContent(
+          content: const ExperiancePage(),
+          context: context,
+          color: Theme.of(context).primaryColorDark,
+        ),
+        _homeContent(
+          content: const WorkPage(),
+          height: MediaQuery.of(context).size.height * 3,
+          context: context,
+          color: Theme.of(context).primaryColorDark,
+        ),
+        _homeContent(
+          content: const ContactPage(),
+          context: context,
+          color: Theme.of(context).primaryColorDark,
+          height: MediaQuery.of(context).size.height * 0.5,
         ),
       ],
     );
   }
 
   Container _homeContent({
-    required String title,
+    required Widget content,
     required BuildContext context,
     required Color color,
+    double? height,
   }) {
     return Container(
-      height: MediaQuery.of(context).size.height,
+      height: height ?? MediaQuery.of(context).size.height,
       width: MediaQuery.of(context).size.width,
       color: color,
       child: Center(
-        child: Text(
-          title,
-          style: const TextStyle(
-            color: Colors.white,
-            fontSize: 100,
-          ),
-        ),
+        child: content,
       ),
     );
   }
