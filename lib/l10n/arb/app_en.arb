@@ -65,7 +65,7 @@
         "description": "Name of the tibtube project"
     },
     "@@locale": "en",
-    "tibtubeProejctUrl": "www.tibtube.come",
+    "tibtubeProejctUrl": "www.tibtube.com",
     "@tibtubeProejctUrl": {
         "description": "Url of tibtube project"
     },
@@ -90,7 +90,7 @@
         "description": "Name of the youtube project"
     },
     "@@locale": "en",
-    "youtubeProejctUrl": "www.youtube.come/gyakohe",
+    "youtubeProejctUrl": "www.youtube.com/gyakhoe",
     "@youtubeProejctUrl": {
         "description": "Url of youtube project"
     },
@@ -115,7 +115,7 @@
         "description": "Name of the github project"
     },
     "@@locale": "en",
-    "githubProejctUrl": "www.github.come/gyakohe",
+    "githubProejctUrl": "www.github.com/gyakhoe",
     "@githubProejctUrl": {
         "description": "Url of github project"
     },
@@ -133,5 +133,105 @@
     "githubImageUrl": "images/github-profile.png",
     "@githubImageUrl": {
         "description": "Image URL of github project"
+    },
+    "@@locale": "en",
+    "addProjectVoiceName": "Flutter Voice Recorder",
+    "@addProjectVoiceName": {
+        "description": "Name of the voice recorder app "
+    },
+    "@@locale": "en",
+    "addProjectVoiceUrl": "www.github.com/gyakhoe/voice_recorder",
+    "@addProjectVoiceUrl": {
+        "description": "Url of the voice recorder app "
+    },
+    "@@locale": "en",
+    "addProjectVoiceDetail": "A Flutter based voice recorder app for iOS and Android. That can record, store, list and playback voice recorded through physcial devices",
+    "@addProjectVoiceDetail": {
+        "description": "Detail of the voice recorder app "
+    },
+    "@@locale": "en",
+    "addProjectVoiceTechnologies": "Dart HTML Ruby Swift",
+    "@addProjectVoiceTechnologies": {
+        "description": "Technologies of the voice recorder app "
+    },
+    "@@locale": "en",
+    "addProjectAuthBlocName": "Flutter Authentication with Bloc",
+    "@addProjectAuthBlocName": {
+        "description": "Name of the Flutter authentication with Bloc "
+    },
+    "@@locale": "en",
+    "addProjectAuthBlocUrl": "www.github.com/gyakhoe/authentication_with_bloc",
+    "@addProjectAuthBlocUrl": {
+        "description": "Url of the Authentication Bloc with Flutter"
+    },
+    "@@locale": "en",
+    "addProjectAuthBlocDetail": "A Flutter based mobile application that handles with authentication of user into the app. The authentication uses Firebase authentication such as google and phone number. The state management used us Flutter Bloc.",
+    "@addProjectAuthBlocDetail": {
+        "description": "Detail of the Flutter authentication with Bloc"
+    },
+    "@@locale": "en",
+    "addProjectAuthBlocTechnologies": "Dart HTML Ruby Swift",
+    "@addProjectAuthBlocTechnologies": {
+        "description": "Technologies of the voice recorder app "
+    },
+    "@@locale": "en",
+    "addProjectGifMakerName": "Flutter GIF Maker",
+    "@addProjectGifMakerName": {
+        "description": "Name of the Flutter Gif maker App"
+    },
+    "@@locale": "en",
+    "addProjectGifMakerUrl": "www.github.com/gyakhoe/gif_maker",
+    "@addProjectGifMakerUrl": {
+        "description": "Url of the Authentication Bloc with Flutter"
+    },
+    "@@locale": "en",
+    "addProjectGifMakerDetail": "A Flutter app that takes in video as input and turns them into GIF. This flutter application can take vidoe, convert them into GIF. Later store and display them back to the user.",
+    "@addProjectGifMakerDetail": {
+        "description": "Detail of the Flutter Gif Maker App"
+    },
+    "@@locale": "en",
+    "addProjectGifMakerTechnologies": "Dart HTML Ruby Swift",
+    "@addProjectGifMakerTechnologies": {
+        "description": "Technologies of Gif Maker App "
+    },
+    "@@locale": "en",
+    "addProjectChatAppName": "Flutter Chat App",
+    "@addProjectChatAppName": {
+        "description": "Name of the Flutter Chat App"
+    },
+    "@@locale": "en",
+    "addProjectChatAppUrl": "www.github.com/gyakhoe/flutter_chat",
+    "@addProjectChatAppUrl": {
+        "description": "Url of the Flutter Chat App"
+    },
+    "@@locale": "en",
+    "addProjectChatAppDetail": "A Flutter app that works on mobile devices. It has feature like authentication, registration of user and ability to chat with one Another. It uses Firebase as backend.",
+    "@addProjectChatAppDetail": {
+        "description": "Detail of the Flutter Chat App"
+    },
+    "@@locale": "en",
+    "addProjectChatAppTechnologies": "Dart HTML Ruby Swift",
+    "@addProjectChatAppTechnologies": {
+        "description": "Technologies of Gif Maker App "
+    },
+    "@@locale": "en",
+    "whatNextContact": "What's next?",
+    "@whatNextContact": {
+        "description": "What's next text on top of contact page"
+    },
+    "@@locale": "en",
+    "getInTouchContact": "Get In Touch",
+    "@getInTouchContact": {
+        "description": "Get in touch text in contact."
+    },
+    "@@locale": "en",
+    "contactExplaination": "Always looking for exciting project/s to work on and be a part of team to learn from and contribute to. Whether you have a question or just want to say hi, My inbox is open. I’ll try my best to get back to you!",
+    "@contactExplaination": {
+        "description": "Long text for contact in contact page"
+    },
+    "@@locale": "en",
+    "contactButtonText": "Say Hi/ Bounjour !",
+    "@contactButtonText": {
+        "description": "Text in button of contact page"
     }
 }

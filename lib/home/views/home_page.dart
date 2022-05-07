@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:portfolio/about/views/about_page.dart';
+import 'package:portfolio/contact/views/contact_page.dart';
 import 'package:portfolio/experiance/views/experiance_page.dart';
 import 'package:portfolio/main/views/main_page.dart';
 import 'package:portfolio/work/views/work_page.dart';
@@ -133,14 +134,15 @@ class _HomeView extends StatelessWidget {
         ),
         _homeContent(
           content: const WorkPage(),
-          height: MediaQuery.of(context).size.height * 2,
+          height: MediaQuery.of(context).size.height * 3,
           context: context,
           color: Theme.of(context).primaryColorDark,
         ),
         _homeContent(
-          content: const Text('Contatct'),
+          content: const ContactPage(),
           context: context,
-          color: Theme.of(context).primaryColorLight,
+          color: Theme.of(context).primaryColorDark,
+          height: MediaQuery.of(context).size.height * 0.5,
         ),
       ],
     );
