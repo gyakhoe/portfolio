@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:portfolio/l10n/l10n.dart';
-import 'package:url_launcher/url_launcher.dart';
+import 'package:portfolio/utilities/open_functions.dart';
 
 class WorkPage extends StatelessWidget {
   const WorkPage({Key? key}) : super(key: key);
@@ -136,7 +136,7 @@ class WorkPage extends StatelessWidget {
                 size: 30,
               ),
               IconButton(
-                onPressed: () => _launchGivenUrl(urlToLaunch: projectUrl),
+                onPressed: () => appsLaunchGivenUrl(urlToLaunch: projectUrl),
                 icon: const Icon(
                   Icons.link_outlined,
                   color: Colors.white,
@@ -287,7 +287,7 @@ class WorkPage extends StatelessWidget {
                     ),
                     IconButton(
                       onPressed: () =>
-                          _launchGivenUrl(urlToLaunch: projectExternalUrl),
+                          appsLaunchGivenUrl(urlToLaunch: projectExternalUrl),
                       icon: const Icon(
                         Icons.rocket_launch,
                         color: Colors.white,
@@ -301,19 +301,5 @@ class WorkPage extends StatelessWidget {
         ),
       ),
     );
-  }
-
-  void _launchGivenUrl({required String urlToLaunch}) {
-    late String host;
-    late String path;
-    if (urlToLaunch.contains('/')) {
-      host = urlToLaunch.substring(0, urlToLaunch.indexOf('/'));
-      path = urlToLaunch.substring(urlToLaunch.indexOf('/'));
-    } else {
-      host = urlToLaunch;
-      path = '/';
-    }
-    final uriToLaunch = Uri(scheme: 'https', host: host, path: path);
-    launchUrl(uriToLaunch);
   }
 }
