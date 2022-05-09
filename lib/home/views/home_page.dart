@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:portfolio/about/views/about_page.dart';
 import 'package:portfolio/contact/views/contact_page.dart';
 import 'package:portfolio/experiance/views/experiance_page.dart';
+import 'package:portfolio/footer/views/footer_page.dart';
+import 'package:portfolio/l10n/l10n.dart';
 import 'package:portfolio/main/views/main_page.dart';
 import 'package:portfolio/work/views/work_page.dart';
 
@@ -21,6 +23,7 @@ class _HomeView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final l10n = context.l10n;
     return Stack(
       children: [
         _homeListView(context),
@@ -65,10 +68,10 @@ class _HomeView extends StatelessWidget {
                     width: 400,
                     child: Row(
                       children: [
-                        _navItem(textToDisplay: 'About'),
-                        _navItem(textToDisplay: 'Experiance'),
-                        _navItem(textToDisplay: 'Work'),
-                        _navItem(textToDisplay: 'Contact'),
+                        _navItem(textToDisplay: l10n.navAboutTitle),
+                        _navItem(textToDisplay: l10n.navExperianceTitle),
+                        _navItem(textToDisplay: l10n.workTitle),
+                        _navItem(textToDisplay: l10n.navContactTitle),
                         MaterialButton(
                           onPressed: () {},
                           shape: RoundedRectangleBorder(
@@ -78,9 +81,9 @@ class _HomeView extends StatelessWidget {
                               width: 2,
                             ),
                           ),
-                          child: const Text(
-                            'Resume',
-                            style: TextStyle(
+                          child: Text(
+                            l10n.navResumeTitle,
+                            style: const TextStyle(
                               color: Colors.white,
                             ),
                           ),
@@ -123,6 +126,12 @@ class _HomeView extends StatelessWidget {
           color: Theme.of(context).primaryColorDark,
         ),
         _homeContent(
+          content: const FooterPage(),
+          context: context,
+          color: Colors.pink,
+          height: MediaQuery.of(context).size.height * 0.1,
+        ),
+        _homeContent(
           content: const AboutPage(),
           context: context,
           color: Theme.of(context).primaryColorDark,
@@ -143,7 +152,7 @@ class _HomeView extends StatelessWidget {
           context: context,
           color: Theme.of(context).primaryColorDark,
           height: MediaQuery.of(context).size.height * 0.5,
-        ),
+        )
       ],
     );
   }

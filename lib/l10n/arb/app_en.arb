@@ -233,5 +233,50 @@
     "contactButtonText": "Say Hi/ Bounjour !",
     "@contactButtonText": {
         "description": "Text in button of contact page"
+    },
+    "@@locale": "en",
+    "socialBrittanyGithubProfile": "www.github.com/bchiang7/v4",
+    "@socialBrittanyGithubProfile": {
+        "description": "Text in button of contact page"
+    },
+    "@@locale": "en",
+    "socialGyagueSonamGithubProfile": "www.github.com/gyakhoe",
+    "@socialGyagueSonamGithubProfile": {
+        "description": "Github profile page of Gyaguue Sonam"
+    },
+    "@@locale": "en",
+    "footerBuiltByText": "Built in Flutter by Gyague Sonam",
+    "@footerBuiltByText": {
+        "description": "Built in Flutter in footer section of portfolio"
+    },
+    "@@locale": "en",
+    "footerDesignByText": "Design inspired from Brittany Chang.",
+    "@footerDesignByText": {
+        "description": "Design inspired from Brittany chang profile text in footer of portfolio"
+    },
+    "@@locale": "en",
+    "navAboutTitle": "About",
+    "@navAboutTitle": {
+        "description": "Title for about button on navigation header"
+    },
+    "@@locale": "en",
+    "navExperianceTitle": "Experiance",
+    "@navExperianceTitle": {
+        "description": "Title for experiance button navigation header"
+    },
+    "@@locale": "en",
+    "navWorkTitle": "Work",
+    "@navWorkTitle": {
+        "description": "Title for Work button navigation header"
+    },
+    "@@locale": "en",
+    "navContactTitle": "Contact",
+    "@navContactTitle": {
+        "description": "Title for Contact button navigation header"
+    },
+    "@@locale": "en",
+    "navResumeTitle": "Resume",
+    "@navResumeTitle": {
+        "description": "Title for the resume button on navigation header"
     }
 }
