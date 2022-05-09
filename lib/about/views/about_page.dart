@@ -100,7 +100,7 @@ class _AboutView extends StatelessWidget {
                               ),
                             ),
                             child: Image.asset(
-                              'assets/images/dog-profile.jpg',
+                              'images/dog-profile.jpg',
                               fit: BoxFit.cover,
                             ),
                           ),

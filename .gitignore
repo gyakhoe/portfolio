@@ -125,3 +125,9 @@ app.*.map.json
 !.idea/codeStyles/
 !.idea/dictionaries/
 !.idea/runConfigurations/
+
+
+### Firebase files to ignore
+.firebaserc
+firebase.json
+.firebase/
