@@ -70,7 +70,7 @@ class _HomeView extends StatelessWidget {
                       children: [
                         _navItem(textToDisplay: l10n.navAboutTitle),
                         _navItem(textToDisplay: l10n.navExperianceTitle),
-                        _navItem(textToDisplay: l10n.workTitle),
+                        _navItem(textToDisplay: l10n.navWorkTitle),
                         _navItem(textToDisplay: l10n.navContactTitle),
                         MaterialButton(
                           onPressed: () {},
@@ -126,12 +126,6 @@ class _HomeView extends StatelessWidget {
           color: Theme.of(context).primaryColorDark,
         ),
         _homeContent(
-          content: const FooterPage(),
-          context: context,
-          color: Colors.pink,
-          height: MediaQuery.of(context).size.height * 0.1,
-        ),
-        _homeContent(
           content: const AboutPage(),
           context: context,
           color: Theme.of(context).primaryColorDark,
@@ -152,6 +146,12 @@ class _HomeView extends StatelessWidget {
           context: context,
           color: Theme.of(context).primaryColorDark,
           height: MediaQuery.of(context).size.height * 0.5,
+        ),
+        _homeContent(
+          content: const FooterPage(),
+          context: context,
+          color: Theme.of(context).primaryColorDark,
+          height: MediaQuery.of(context).size.height * 0.1,
         )
       ],
     );
