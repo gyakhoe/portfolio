@@ -66,7 +66,7 @@ class ExperiancePage extends StatelessWidget {
                           padding: const EdgeInsets.all(20),
                           color: Colors.grey,
                           child: Text(
-                            l10n.presentExperiance,
+                            l10n.experiancePresent,
                             style:
                                 Theme.of(context).textTheme.bodyLarge!.copyWith(
                                       color: Colors.white,

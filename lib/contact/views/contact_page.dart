@@ -15,7 +15,7 @@ class ContactPage extends StatelessWidget {
           Padding(
             padding: const EdgeInsets.all(5),
             child: Text(
-              l10n.whatNextContact,
+              l10n.contactTitle,
               style: Theme.of(context)
                   .textTheme
                   .headlineSmall
@@ -25,7 +25,7 @@ class ContactPage extends StatelessWidget {
           Padding(
             padding: const EdgeInsets.all(20),
             child: Text(
-              l10n.getInTouchContact,
+              l10n.contactSecondaryTitle,
               style: Theme.of(context).textTheme.headlineLarge!.copyWith(
                     color: Colors.white,
                   ),
@@ -59,9 +59,9 @@ class ContactPage extends StatelessWidget {
             ),
             onPressed: () {
               final emailURI = Uri(
-                scheme: 'mailto',
-                path: 'gyague.sonam@gmail.com',
-                query: 'subject=Hi! From your portfolio',
+                scheme: l10n.contactEmailScheme,
+                path: l10n.contactUserEmail,
+                query: l10n.contactEmailSubject,
               );
               launchUrl(emailURI);
               // launchUrlString(emailURI.toString());

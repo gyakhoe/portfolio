@@ -32,7 +32,7 @@ class _AboutView extends StatelessWidget {
           Row(
             children: [
               Text(
-                'About me',
+                l10n.aboutMeTitle,
                 style: Theme.of(context).textTheme.headline4!.copyWith(
                       color: Colors.white,
                     ),
@@ -100,7 +100,7 @@ class _AboutView extends StatelessWidget {
                               ),
                             ),
                             child: Image.asset(
-                              'images/dog-profile.jpg',
+                              l10n.aboutMeImage,
                               fit: BoxFit.cover,
                             ),
                           ),

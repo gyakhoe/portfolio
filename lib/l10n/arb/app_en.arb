@@ -1,53 +1,48 @@
 {
     "@@locale": "en",
-    "counterAppBarTitle": "Counter",
-    "@counterAppBarTitle": {
-        "description": "Text shown in the AppBar of the Counter Page"
-    },
-    "@@locale": "en",
-    "aboutMeDetail": "Hello! My name is Brittany and I enjoy creating things that live on the internet. My interest in web development started back in 2012 when I decided to try editing custom Tumblr themes — turns out hacking together a custom reblog button taught me a lot about HTML & CSS! \n \n Fast-forward to today, and I’ve had the privilege of working at an advertising agency, a start-up, a huge corporation, and a student-led design studio. My main focus these days is building accessible, inclusive products and digital experiences at Upstatement for a variety of clients. \n \n I also recently launched a course that covers everything you need to build a web app with the Spotify API using Node & React. \n \n Here are a few technologies I’ve been working with recently:",
-    "@aboutMeDetail": {
-        "description": "This is about me detail of the website"
-    },
-    "@@locale": "en",
-    "mainDetail": "I’m a software engineer specializing in building (and occasionally designing) exceptional digital experiences. Currently, I’m focused on building accessible, human-centered products at Upstatement.",
-    "@mainDetail": {
-        "description": "This is main detail about me"
-    },
-    "@@locale": "en",
-    "workTitle": "I make mobile, and web applications using Flutter",
-    "@workTitle": {
-        "description": "This is the work title"
-    },
-    "@@locale": "en",
-    "nameTitle": "Gyague Sonam",
-    "@nameTitle": {
-        "description": "This is the name of the owner of portfolio"
-    },
-    "@@locale": "en",
-    "hiTitle": "Hi! my name is ",
-    "@hiTitle": {
+    "mainTitle": "Hi! my name is ",
+    "@mainTitle": {
         "description": "Hi text in begining of the page"
     },
     "@@locale": "en",
-    "presentExperiance": "2020 - Present. Indie Flutter App developer and making Youtube content.",
-    "@presentExperiance": {
-        "description": "Exp from 2019 to present"
+    "mainNameTitle": "Gyague Sonam",
+    "@mainNameTitle": {
+        "description": "This is the name of the owner of portfolio"
     },
     "@@locale": "en",
-    "experiance2019": "2016 - 2019. Senior Project Engineer at Wipro Ltd.",
-    "@experiance2019": {
-        "description": "Exp from 2016 to 2019"
+    "mainWorkTitle": "I make mobile, and web applications using Flutter",
+    "@mainWorkTitle": {
+        "description": "This is the work title"
     },
     "@@locale": "en",
-    "experiance2016": "2012 - 2016. Project Engineer at Wipro Ltd.",
-    "@experiance2016": {
-        "description": "2012 to 2016 experiances "
+    "workSecondaryTitleText": "Other note worthy projects",
+    "@workSecondaryTitleText": {
+        "description": "Title text of the work page"
     },
     "@@locale": "en",
-    "experiance2012": "2009-2012. Bachelors in Computer ApplicationHi! my name is ",
-    "@experiance2012": {
-        "description": "2009 to 2012 experiances"
+    "mainWorkDetailTitle": "I'm a software engineer specializing in building software using Flutter. I like writing code for mobile, web, and desktop applications with it. Currently, I'm focused on upscaling my Youtube video quality by working on interesting Flutter projects.",
+    "@mainWorkDetailTitle": {
+        "description": "This is main detail about me"
+    },
+    "@@locale": "en",
+    "mainYoutubeButtonTitle": "Check out my Youtube",
+    "@mainYoutubeButtonTitle": {
+        "description": "Text to be displayed on main page."
+    },
+    "@@locale": "en",
+    "aboutMeTitle": "About me",
+    "@aboutMeTitle": {
+        "description": "About me text in about me page"
+    },
+    "@@locale": "en",
+    "aboutMeImage": "images/gyague-profile.png",
+    "@aboutMeImage": {
+        "description": "About me text in about me page"
+    },
+    "@@locale": "en",
+    "aboutMeDetail": "Hello! My name is Gyague Sonam and I enjoy creating something out of nothing from my code. I’ve been involved with the software development team as a rookie since 2012. Since then I’ve been involved in many different roles throughout my career.\n\nI’ve indulged myself in writing Flutter code since 2020, and have been very pleased with what it enables me. This website is my take on writing Flutter on the web.\n\nI’m a passionate Flutter dev, learning every time whilst trying to teach others what I’ve learned so far. I was surprised by Youtube videos, where I explain what I am doing. The feedback from students of Flutter is amazing at the same time heartwarming.\n\nSo, far I’ve learned a little bit about Flutter and made a few mobile and web apps. I have learned about video editing, writing scripts, and thumbnails.\n\nAnd last but not the least, I've happily used Firebase as the backend for all my projects.",
+    "@aboutMeDetail": {
+        "description": "Detail about me in portfolio"
     },
     "@@locale": "en",
     "experianceTitle": "Where I've worked",
@@ -55,184 +50,224 @@
         "description": "Title of the experiance page."
     },
     "@@locale": "en",
-    "proejctTitle": "Featured Proejct",
-    "@proejctTitle": {
+    "experiancePresent": "2020 - Present: Indie Flutter App developer and making Youtube content.",
+    "@experiancePresent": {
+        "description": "Exp from 2019 to present"
+    },
+    "@@locale": "en",
+    "experiance2019": "2016 - 2019: Senior Project Engineer at Wipro Ltd.",
+    "@experiance2019": {
+        "description": "Exp from 2016 to 2019"
+    },
+    "@@locale": "en",
+    "experiance2016": "2012 - 2016: Project Engineer at Wipro Ltd.",
+    "@experiance2016": {
+        "description": "2012 to 2016 experiances "
+    },
+    "@@locale": "en",
+    "experiance2012": "2009-2012: Bachelors in Computer Application.",
+    "@experiance2012": {
+        "description": "2009 to 2012 experiances"
+    },
+    "@@locale": "en",
+    "workTitleText": "Some Things I've built",
+    "@workTitleText": {
+        "description": "Title text of the work page"
+    },
+    "@@locale": "en",
+    "workFeatureProjectTitle": "Featured Projects",
+    "@workFeatureProjectTitle": {
         "description": "Text to be dispalyed before the proejct name"
     },
     "@@locale": "en",
-    "tibtubeProjectName": "TibTube",
-    "@tibtubeProjectName": {
+    "workTibtubeProjectTitle": "TibTube",
+    "@workTibtubeProjectTitle": {
         "description": "Name of the tibtube project"
     },
     "@@locale": "en",
-    "tibtubeProejctUrl": "www.tibtube.com",
-    "@tibtubeProejctUrl": {
+    "workTibtubeUrl": "www.tibtube.com",
+    "@workTibtubeUrl": {
         "description": "Url of tibtube project"
     },
     "@@locale": "en",
-    "tibtubeDetail": "A Flutter Web project that works with Youtube Data API. It fetches data from youtube for the given channel and list them in this web application. User can chossed to watch the video here as well.",
-    "@tibtubeDetail": {
-        "description": "Descrioption about the tibtube project"
+    "workTibtubeDetail": "A Flutter Web project that works with Youtube Data API. It fetches data from youtube for the given channel and lists them in this web application. Users can choose to watch the video here as well.",
+    "@workTibtubeDetail": {
+        "description": "description about the tibtube project"
     },
     "@@locale": "en",
-    "technologiesInProeject": "Technologies : Flutter, dart, Firebase, Youtube Dta API",
-    "@technologiesInProeject": {
-        "description": "Name of the technologies  used in project"
-    },
-    "@@locale": "en",
-    "tibtubeImageUrl": "images/tibtube-profile.png",
-    "@tibtubeImageUrl": {
+    "workTibtubeImageUrl": "images/tibtube-profile.png",
+    "@workTibtubeImageUrl": {
         "description": "Image URL of tibtube project"
     },
     "@@locale": "en",
-    "youtubeProjectName": "Youtube",
-    "@youtubeProjectName": {
+    "workTibtubeTechnologies": "Technologies : Flutter, dart, Firebase, Youtube Dta API",
+    "@workTibtubeTechnologies": {
+        "description": "Name of the technologies  used in project"
+    },
+    "@@locale": "en",
+    "workYoutubeProjectName": "Youtube",
+    "@workYoutubeProjectName": {
         "description": "Name of the youtube project"
     },
     "@@locale": "en",
-    "youtubeProejctUrl": "www.youtube.com/gyakhoe",
-    "@youtubeProejctUrl": {
+    "workYoutubeUrl": "www.youtube.com/gyakhoe",
+    "@workYoutubeUrl": {
         "description": "Url of youtube project"
     },
     "@@locale": "en",
-    "youtubeDetail": "I make YouTube tutorial Flutter. At the time of writing this, I've about created 25 videos and gained thousands of watch time.",
-    "@youtubeDetail": {
+    "workYoutubeDetail": "I make YouTube tutorial Flutter. At the time of writing this, I've about created 25 videos and gained thousands of watch time.",
+    "@workYoutubeDetail": {
         "description": "Descrioption about the youtube project"
     },
     "@@locale": "en",
-    "technologiesInProeject": "Technologies : Flutter, dart, Firebase, Youtube Dta API",
-    "@technologiesInProeject": {
-        "description": "Name of the technologies  used in project"
-    },
-    "@@locale": "en",
-    "youtubeImageUrl": "images/youtube-profile.png",
-    "@youtubeImageUrl": {
+    "workYoutubeImageUrl": "images/youtube-profile.png",
+    "@workYoutubeImageUrl": {
         "description": "Image URL of youtube project"
     }, 
     "@@locale": "en",
-    "githubProjectName": "github",
-    "@githubProjectName": {
-        "description": "Name of the github project"
-    },
-    "@@locale": "en",
-    "githubProejctUrl": "www.github.com/gyakhoe",
-    "@githubProejctUrl": {
-        "description": "Url of github project"
-    },
-    "@@locale": "en",
-    "githubDetail": "I do contribute to opensource community by pushing my code into GitHub. Over the time I've gained over 21 followers and 55 stars. Many have even forked my projects to learn and build something on their own.",
-    "@githubDetail": {
-        "description": "Descrioption about the github project"
-    },
-    "@@locale": "en",
-    "technologiesInProeject": "Technologies : Flutter, dart, Firebase, github Dta API",
-    "@technologiesInProeject": {
+    "workYoutubetechnologies": "Technologies : Script writing, Video Editing, Thumbnails, Youtube Analytics",
+    "@workYoutubetechnologies": {
         "description": "Name of the technologies  used in project"
     },
     "@@locale": "en",
-    "githubImageUrl": "images/github-profile.png",
-    "@githubImageUrl": {
+    "workGithubProjectName": "github",
+    "@workGithubProjectName": {
+        "description": "Name of the github project"
+    },
+    "@@locale": "en",
+    "workGithubProejctUrl": "www.github.com/gyakhoe",
+    "@workGithubProejctUrl": {
+        "description": "Url of github project"
+    },
+    "@@locale": "en",
+    "workGithubDetail": "I do contribute to the open-source community by pushing my code into GitHub. Over time I've gained over 21 followers and 55 stars. Many have even forked my projects to learn and build something on their own.",
+    "@workGithubDetail": {
+        "description": "description about the github project"
+    },
+    "@@locale": "en",
+    "workGithubTechnologies": "Technologies : Flutter  dart  Firebase",
+    "@workGithubTechnologies": {
+        "description": "Name of the technologies  used in project"
+    },
+    "@@locale": "en",
+    "workGithubImageUrl": "images/github-profile.png",
+    "@workGithubImageUrl": {
         "description": "Image URL of github project"
     },
     "@@locale": "en",
-    "addProjectVoiceName": "Flutter Voice Recorder",
-    "@addProjectVoiceName": {
+    "workVoiceRecorderTitle": "Flutter Voice Recorder",
+    "@workVoiceRecorderTitle": {
         "description": "Name of the voice recorder app "
     },
     "@@locale": "en",
-    "addProjectVoiceUrl": "www.github.com/gyakhoe/voice_recorder",
-    "@addProjectVoiceUrl": {
+    "workVoiceRecorderUrl": "www.github.com/gyakhoe/voice_recorder",
+    "@workVoiceRecorderUrl": {
         "description": "Url of the voice recorder app "
     },
     "@@locale": "en",
-    "addProjectVoiceDetail": "A Flutter based voice recorder app for iOS and Android. That can record, store, list and playback voice recorded through physcial devices",
-    "@addProjectVoiceDetail": {
+    "workVoiceRecorderDetail": "A Flutter-based voice recorder app for iOS and Android. That can record, store, list, and playback voice recorded through physical devices.",
+    "@workVoiceRecorderDetail": {
         "description": "Detail of the voice recorder app "
     },
     "@@locale": "en",
-    "addProjectVoiceTechnologies": "Dart HTML Ruby Swift",
-    "@addProjectVoiceTechnologies": {
+    "workVoiceRecorderTechnologies": "Dart HTML Ruby Swift",
+    "@workVoiceRecorderTechnologies": {
         "description": "Technologies of the voice recorder app "
     },
     "@@locale": "en",
-    "addProjectAuthBlocName": "Flutter Authentication with Bloc",
-    "@addProjectAuthBlocName": {
+    "workAuthBlocTitle": "Flutter Authentication with Bloc",
+    "@workAuthBlocTitle": {
         "description": "Name of the Flutter authentication with Bloc "
     },
     "@@locale": "en",
-    "addProjectAuthBlocUrl": "www.github.com/gyakhoe/authentication_with_bloc",
-    "@addProjectAuthBlocUrl": {
+    "workAuthBlocUrl": "www.github.com/gyakhoe/authentication_with_bloc",
+    "@workAuthBlocUrl": {
         "description": "Url of the Authentication Bloc with Flutter"
     },
     "@@locale": "en",
-    "addProjectAuthBlocDetail": "A Flutter based mobile application that handles with authentication of user into the app. The authentication uses Firebase authentication such as google and phone number. The state management used us Flutter Bloc.",
-    "@addProjectAuthBlocDetail": {
+    "workAuthBlocDetail": "A Flutter-based mobile application that handles with authentication of a user into the app. The authentication uses Firebase authentication such as google and phone number. The state management used is Flutter Bloc.",
+    "@workAuthBlocDetail": {
         "description": "Detail of the Flutter authentication with Bloc"
     },
     "@@locale": "en",
-    "addProjectAuthBlocTechnologies": "Dart HTML Ruby Swift",
-    "@addProjectAuthBlocTechnologies": {
+    "workAuthBlocTechnologies": "Dart HTML Ruby Swift Firebase",
+    "@workAuthBlocTechnologies": {
         "description": "Technologies of the voice recorder app "
     },
     "@@locale": "en",
-    "addProjectGifMakerName": "Flutter GIF Maker",
-    "@addProjectGifMakerName": {
+    "workGifMakerTitle": "Flutter GIF Maker",
+    "@workGifMakerTitle": {
         "description": "Name of the Flutter Gif maker App"
     },
     "@@locale": "en",
-    "addProjectGifMakerUrl": "www.github.com/gyakhoe/gif_maker",
-    "@addProjectGifMakerUrl": {
+    "workGifMakerUrl": "www.github.com/gyakhoe/gif_maker",
+    "@workGifMakerUrl": {
         "description": "Url of the Authentication Bloc with Flutter"
     },
     "@@locale": "en",
-    "addProjectGifMakerDetail": "A Flutter app that takes in video as input and turns them into GIF. This flutter application can take vidoe, convert them into GIF. Later store and display them back to the user.",
-    "@addProjectGifMakerDetail": {
+    "workGifMakerDetail": "A Flutter app that takes in the video as input and turns them into GIFs. This flutter application can take videos, and convert them into GIFs. Later store and display them back to the user.",
+    "@workGifMakerDetail": {
         "description": "Detail of the Flutter Gif Maker App"
     },
     "@@locale": "en",
-    "addProjectGifMakerTechnologies": "Dart HTML Ruby Swift",
-    "@addProjectGifMakerTechnologies": {
+    "workGifMakerTechnologies": "Dart HTML Ruby Swift FFMpeg",
+    "@workGifMakerTechnologies": {
         "description": "Technologies of Gif Maker App "
     },
     "@@locale": "en",
-    "addProjectChatAppName": "Flutter Chat App",
-    "@addProjectChatAppName": {
+    "workFlutterChatTitle": "Flutter Chat App",
+    "@workFlutterChatTitle": {
         "description": "Name of the Flutter Chat App"
     },
     "@@locale": "en",
-    "addProjectChatAppUrl": "www.github.com/gyakhoe/flutter_chat",
-    "@addProjectChatAppUrl": {
+    "workFlutterChatUrl": "www.github.com/gyakhoe/flutter_chat",
+    "@workFlutterChatUrl": {
         "description": "Url of the Flutter Chat App"
     },
     "@@locale": "en",
-    "addProjectChatAppDetail": "A Flutter app that works on mobile devices. It has feature like authentication, registration of user and ability to chat with one Another. It uses Firebase as backend.",
-    "@addProjectChatAppDetail": {
+    "workFlutterChatDetail": "A Flutter app that works on mobile devices. It has a feature like authentication, registration of users, and the ability to chat with One Another. It uses Firebase as a backend.",
+    "@workFlutterChatDetail": {
         "description": "Detail of the Flutter Chat App"
     },
     "@@locale": "en",
-    "addProjectChatAppTechnologies": "Dart HTML Ruby Swift",
-    "@addProjectChatAppTechnologies": {
+    "workFlutterChatTechnologies": "Dart HTML Ruby Swift Firebase Bloc",
+    "@workFlutterChatTechnologies": {
         "description": "Technologies of Gif Maker App "
     },
     "@@locale": "en",
-    "whatNextContact": "What's next?",
-    "@whatNextContact": {
+    "contactTitle": "What's next?",
+    "@contactTitle": {
         "description": "What's next text on top of contact page"
     },
     "@@locale": "en",
-    "getInTouchContact": "Get In Touch",
-    "@getInTouchContact": {
+    "contactSecondaryTitle": "Get In Touch",
+    "@contactSecondaryTitle": {
         "description": "Get in touch text in contact."
     },
     "@@locale": "en",
-    "contactExplaination": "Always looking for exciting project/s to work on and be a part of team to learn from and contribute to. Whether you have a question or just want to say hi, My inbox is open. I’ll try my best to get back to you!",
+    "contactExplaination": "Always looking for exciting project/s to work on and be a part of a team to learn from and contribute to. Whether you have a question or just want to say hi, My inbox is open. I’ll try my best to get back to you!",
     "@contactExplaination": {
         "description": "Long text for contact in contact page"
     },
     "@@locale": "en",
-    "contactButtonText": "Say Hi/ Bounjour !",
+    "contactButtonText": "Say Hi or Bounjour!",
     "@contactButtonText": {
         "description": "Text in button of contact page"
+    },
+    "@@locale": "en",
+    "contactEmailScheme": "mailto",
+    "@mailScheme": {
+        "description": "Scheme for sending the email on contact page"
+    },
+    "@@locale": "en",
+    "contactUserEmail": "gyague.sonam@gmail.com",
+    "@contactGyagueEmail": {
+        "description": "Email ID of Gyague"
+    },
+    "@@locale": "en",
+    "contactEmailSubject": "subject=Hi! From your portfolio",
+    "@contactEmailSubject": {
+        "description": "Subject for contact email"
     },
     "@@locale": "en",
     "socialBrittanyGithubProfile": "www.github.com/bchiang7/v4",

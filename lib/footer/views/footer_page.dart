@@ -16,7 +16,7 @@ class FooterPage extends StatelessWidget {
         children: [
           TextButton(
             onPressed: () => appsLaunchGivenUrl(
-              urlToLaunch: l10n.githubProejctUrl,
+              urlToLaunch: l10n.socialGyagueSonamGithubProfile,
             ),
             child: Text(
               l10n.footerBuiltByText,

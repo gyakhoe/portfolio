@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:portfolio/l10n/l10n.dart';
+import 'package:portfolio/utilities/open_functions.dart';
 
 class MainPage extends StatelessWidget {
   const MainPage({Key? key}) : super(key: key);
@@ -19,13 +20,13 @@ class MainPage extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Text(
-              l10n.hiTitle,
+              l10n.mainTitle,
               style: Theme.of(context).textTheme.headlineSmall!.copyWith(
                     color: Colors.white,
                   ),
             ),
             Text(
-              l10n.nameTitle,
+              l10n.mainNameTitle,
               style: Theme.of(context)
                   .textTheme
                   .headline1!
@@ -34,7 +35,7 @@ class MainPage extends StatelessWidget {
             Padding(
               padding: const EdgeInsets.all(10),
               child: Text(
-                l10n.workTitle,
+                l10n.mainWorkTitle,
                 style: Theme.of(context).textTheme.headlineMedium!.copyWith(
                       color: Colors.white,
                       letterSpacing: 10,
@@ -42,7 +43,7 @@ class MainPage extends StatelessWidget {
               ),
             ),
             Text(
-              l10n.mainDetail,
+              l10n.mainWorkDetailTitle,
               style: Theme.of(context).textTheme.headline6!.copyWith(
                     color: Colors.white,
                   ),
@@ -58,11 +59,13 @@ class MainPage extends StatelessWidget {
                   width: 4,
                 ),
               ),
-              onPressed: () {},
+              onPressed: () => appsLaunchGivenUrl(
+                urlToLaunch: l10n.workYoutubeUrl,
+              ),
               child: Container(
                 padding: const EdgeInsets.all(10),
                 child: Text(
-                  'Check out my Youtube',
+                  l10n.mainYoutubeButtonTitle,
                   style: Theme.of(context).textTheme.headlineSmall!.copyWith(
                         color: Colors.white,
                       ),
