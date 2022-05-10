@@ -313,5 +313,30 @@
     "navResumeTitle": "Resume",
     "@navResumeTitle": {
         "description": "Title for the resume button on navigation header"
+    },
+    "@@locale": "en",
+    "socialGithubUrl": "www.github.com/gyakhoe",
+    "@socialGithubUrl": {
+        "description": "Github profile URL of portofio owner"
+    },
+    "@@locale": "en",
+    "socialYoutubeUrl": "www.youtube.com/gyakhoe",
+    "@socialYoutubeUrl": {
+        "description": "Youtube profile URL of the portfolio owner"
+    },
+    "@@locale": "en",
+    "socialTwitterUrl": "www.twitter.com/gyakhoe",
+    "@socialTwitterUrl": {
+        "description": "Twitter profile URL of the portfolio owner"
+    },
+    "@@locale": "en",
+    "socialInstagramUrl": "www.instagram.com/gyakhoe",
+    "@socialInstagramUrl": {
+        "description": "instagram profile URL of the portfoio owner"
+    },
+    "@@locale": "en",
+    "socialMediumURL": "gyakhoe.medium.com",
+    "@socialMediumURL": {
+        "description": "medium profile URL of the portofio owner"
     }
 }
