@@ -3,7 +3,8 @@ import 'package:portfolio/about/views/about_page.dart';
 import 'package:portfolio/contact/views/contact_page.dart';
 import 'package:portfolio/experiance/views/experiance_page.dart';
 import 'package:portfolio/footer/views/footer_page.dart';
-import 'package:portfolio/l10n/l10n.dart';
+import 'package:portfolio/header/views/side_header_page.dart';
+import 'package:portfolio/header/views/top_header_page.dart';
 import 'package:portfolio/main/views/main_page.dart';
 import 'package:portfolio/work/views/work_page.dart';
 
@@ -23,97 +24,21 @@ class _HomeView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final l10n = context.l10n;
     return Stack(
       children: [
         _homeListView(context),
-        Align(
-          alignment: Alignment.topCenter,
-          child: Container(
-            decoration: BoxDecoration(
-              boxShadow: const [
-                BoxShadow(
-                  color: Colors.white30,
-                  offset: Offset(
-                    0,
-                    2,
-                  ),
-                  blurRadius: 2,
-                  spreadRadius: 2,
-                ), //BoxShadow
-                BoxShadow(
-                  color: Colors.white,
-                ),
-              ],
-              color: Theme.of(context).primaryColorDark,
-            ),
-            height: 100,
-            width: MediaQuery.of(context).size.width,
-            child: Stack(
-              children: [
-                const Align(
-                  alignment: Alignment.centerLeft,
-                  child: Padding(
-                    padding: EdgeInsets.all(10),
-                    child: Icon(
-                      Icons.language,
-                      color: Colors.white,
-                      size: 80,
-                    ),
-                  ),
-                ),
-                Align(
-                  alignment: Alignment.centerRight,
-                  child: SizedBox(
-                    width: 400,
-                    child: Row(
-                      children: [
-                        _navItem(textToDisplay: l10n.navAboutTitle),
-                        _navItem(textToDisplay: l10n.navExperianceTitle),
-                        _navItem(textToDisplay: l10n.navWorkTitle),
-                        _navItem(textToDisplay: l10n.navContactTitle),
-                        MaterialButton(
-                          onPressed: () {},
-                          shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(10),
-                            side: const BorderSide(
-                              color: Colors.white,
-                              width: 2,
-                            ),
-                          ),
-                          child: Text(
-                            l10n.navResumeTitle,
-                            style: const TextStyle(
-                              color: Colors.white,
-                            ),
-                          ),
-                        )
-                      ],
-                    ),
-                  ),
-                ),
-              ],
-            ),
-          ),
+        const TopHeaderPage(),
+        SiderHeaderPage(
+          isEmailHeader: false,
+          alignment: Alignment.bottomLeft,
+          color: Theme.of(context).primaryColorDark,
         ),
+        SiderHeaderPage(
+          isEmailHeader: true,
+          alignment: Alignment.bottomRight,
+          color: Theme.of(context).primaryColorDark,
+        )
       ],
-    );
-  }
-
-  TextStyle _homeNavTextStyle() {
-    return const TextStyle(
-      color: Colors.white,
-    );
-  }
-
-  Widget _navItem({required String textToDisplay}) {
-    return Container(
-      margin: const EdgeInsets.all(10),
-      padding: const EdgeInsets.all(5),
-      child: Text(
-        textToDisplay,
-        style: _homeNavTextStyle(),
-      ),
     );
   }
 

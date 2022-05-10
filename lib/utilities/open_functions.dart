@@ -1,3 +1,5 @@
+import 'package:flutter/material.dart';
+import 'package:portfolio/l10n/l10n.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 void appsLaunchGivenUrl({required String urlToLaunch}) {
@@ -12,4 +14,14 @@ void appsLaunchGivenUrl({required String urlToLaunch}) {
   }
   final uriToLaunch = Uri(scheme: 'https', host: host, path: path);
   launchUrl(uriToLaunch);
+}
+
+void appsSendEmail({required BuildContext context}) {
+  final l10n = context.l10n;
+  final emailURI = Uri(
+    scheme: l10n.contactEmailScheme,
+    path: l10n.contactUserEmail,
+    query: l10n.contactEmailSubject,
+  );
+  launchUrl(emailURI);
 }

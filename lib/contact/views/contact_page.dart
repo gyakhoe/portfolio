@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:portfolio/l10n/l10n.dart';
-import 'package:url_launcher/url_launcher.dart';
+import 'package:portfolio/utilities/open_functions.dart';
 
 class ContactPage extends StatelessWidget {
   const ContactPage({Key? key}) : super(key: key);
@@ -58,12 +58,7 @@ class ContactPage extends StatelessWidget {
               ),
             ),
             onPressed: () {
-              final emailURI = Uri(
-                scheme: l10n.contactEmailScheme,
-                path: l10n.contactUserEmail,
-                query: l10n.contactEmailSubject,
-              );
-              launchUrl(emailURI);
+              appsSendEmail(context: context);
               // launchUrlString(emailURI.toString());
             },
             child: SizedBox(
