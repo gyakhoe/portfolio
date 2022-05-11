@@ -12,7 +12,9 @@ class MainPage extends StatelessWidget {
       alignment: Alignment.bottomCenter,
       child: Container(
         color: Theme.of(context).primaryColorDark,
-        margin: const EdgeInsets.symmetric(horizontal: 100),
+        margin: isMobileView(context: context)
+            ? const EdgeInsets.all(10)
+            : const EdgeInsets.symmetric(horizontal: 100),
         width: MediaQuery.of(context).size.width,
         height: MediaQuery.of(context).size.height - 100,
         child: Column(
@@ -27,19 +29,28 @@ class MainPage extends StatelessWidget {
             ),
             Text(
               l10n.mainNameTitle,
-              style: Theme.of(context)
-                  .textTheme
-                  .headline1!
-                  .copyWith(color: Colors.white),
+              style: isMobileView(context: context)
+                  ? Theme.of(context).textTheme.headline2?.copyWith(
+                        color: Colors.white,
+                      )
+                  : Theme.of(context)
+                      .textTheme
+                      .headline1!
+                      .copyWith(color: Colors.white),
             ),
             Padding(
               padding: const EdgeInsets.all(10),
               child: Text(
                 l10n.mainWorkTitle,
-                style: Theme.of(context).textTheme.headlineMedium!.copyWith(
-                      color: Colors.white,
-                      letterSpacing: 10,
-                    ),
+                style: isMobileView(context: context)
+                    ? Theme.of(context)
+                        .textTheme
+                        .headline4
+                        ?.copyWith(color: Colors.white)
+                    : Theme.of(context).textTheme.headlineMedium!.copyWith(
+                          color: Colors.white,
+                          letterSpacing: 10,
+                        ),
               ),
             ),
             Text(
@@ -66,9 +77,14 @@ class MainPage extends StatelessWidget {
                 padding: const EdgeInsets.all(10),
                 child: Text(
                   l10n.mainYoutubeButtonTitle,
-                  style: Theme.of(context).textTheme.headlineSmall!.copyWith(
-                        color: Colors.white,
-                      ),
+                  style: isMobileView(context: context)
+                      ? Theme.of(context)
+                          .textTheme
+                          .bodyLarge
+                          ?.copyWith(color: Colors.white)
+                      : Theme.of(context).textTheme.headlineSmall!.copyWith(
+                            color: Colors.white,
+                          ),
                 ),
               ),
             )

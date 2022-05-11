@@ -100,7 +100,7 @@
         "description": "Image URL of tibtube project"
     },
     "@@locale": "en",
-    "workTibtubeTechnologies": "Technologies : Flutter, dart, Firebase, Youtube Dta API",
+    "workTibtubeTechnologies": " Flutter, dart, Firebase, Youtube Dta API",
     "@workTibtubeTechnologies": {
         "description": "Name of the technologies  used in project"
     },
@@ -125,7 +125,7 @@
         "description": "Image URL of youtube project"
     }, 
     "@@locale": "en",
-    "workYoutubetechnologies": "Technologies : Script writing, Video Editing, Thumbnails, Youtube Analytics",
+    "workYoutubetechnologies": " Script writing, Video Editing, Thumbnails, Youtube Analytics",
     "@workYoutubetechnologies": {
         "description": "Name of the technologies  used in project"
     },
@@ -145,7 +145,7 @@
         "description": "description about the github project"
     },
     "@@locale": "en",
-    "workGithubTechnologies": "Technologies : Flutter  dart  Firebase",
+    "workGithubTechnologies": " Flutter  dart  Firebase",
     "@workGithubTechnologies": {
         "description": "Name of the technologies  used in project"
     },

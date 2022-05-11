@@ -9,11 +9,16 @@ class ContactPage extends StatelessWidget {
   Widget build(BuildContext context) {
     final l10n = context.l10n;
     return Container(
-      margin: const EdgeInsets.symmetric(horizontal: 100),
+      margin: isMobileView(context: context)
+          ? const EdgeInsets.all(10)
+          : const EdgeInsets.symmetric(horizontal: 100),
       child: Column(
+        mainAxisAlignment: MainAxisAlignment.spaceAround,
         children: [
           Padding(
-            padding: const EdgeInsets.all(5),
+            padding: isMobileView(context: context)
+                ? EdgeInsets.zero
+                : const EdgeInsets.all(5),
             child: Text(
               l10n.contactTitle,
               style: Theme.of(context)
@@ -23,7 +28,9 @@ class ContactPage extends StatelessWidget {
             ),
           ),
           Padding(
-            padding: const EdgeInsets.all(20),
+            padding: isMobileView(context: context)
+                ? const EdgeInsets.symmetric(horizontal: 2)
+                : const EdgeInsets.all(20),
             child: Text(
               l10n.contactSecondaryTitle,
               style: Theme.of(context).textTheme.headlineLarge!.copyWith(
@@ -32,18 +39,20 @@ class ContactPage extends StatelessWidget {
             ),
           ),
           Container(
-            padding: const EdgeInsets.only(
-              bottom: 20,
-              left: 20,
-              right: 20,
-            ),
+            padding: isMobileView(context: context)
+                ? const EdgeInsets.symmetric(horizontal: 5)
+                : const EdgeInsets.only(
+                    bottom: 20,
+                    left: 20,
+                    right: 20,
+                  ),
             width: 700,
             child: Text(
               l10n.contactExplaination,
               textAlign: TextAlign.center,
               style: Theme.of(context).textTheme.bodyText1?.copyWith(
                     color: Colors.white,
-                    fontSize: 20,
+                    fontSize: isMobileView(context: context) ? 15 : 20,
                   ),
             ),
           ),
@@ -66,9 +75,14 @@ class ContactPage extends StatelessWidget {
                 padding: const EdgeInsets.all(8),
                 child: Text(
                   l10n.contactButtonText,
-                  style: Theme.of(context).textTheme.headlineSmall?.copyWith(
-                        color: Colors.white,
-                      ),
+                  style: isMobileView(context: context)
+                      ? Theme.of(context)
+                          .textTheme
+                          .bodyText1
+                          ?.copyWith(color: Colors.white)
+                      : Theme.of(context).textTheme.headlineSmall?.copyWith(
+                            color: Colors.white,
+                          ),
                 ),
               ),
             ),

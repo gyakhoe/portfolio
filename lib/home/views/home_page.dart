@@ -6,6 +6,8 @@ import 'package:portfolio/footer/views/footer_page.dart';
 import 'package:portfolio/header/views/side_header_page.dart';
 import 'package:portfolio/header/views/top_header_page.dart';
 import 'package:portfolio/main/views/main_page.dart';
+import 'package:portfolio/utilities/open_functions.dart';
+import 'package:portfolio/utilities/responsive_ui.dart';
 import 'package:portfolio/work/views/work_page.dart';
 
 class HomePage extends StatelessWidget {
@@ -28,22 +30,29 @@ class _HomeView extends StatelessWidget {
       children: [
         _homeListView(context),
         const TopHeaderPage(),
-        SiderHeaderPage(
-          isEmailHeader: false,
-          alignment: Alignment.bottomLeft,
-          color: Theme.of(context).primaryColorDark,
-        ),
-        SiderHeaderPage(
-          isEmailHeader: true,
-          alignment: Alignment.bottomRight,
-          color: Theme.of(context).primaryColorDark,
-        )
+        if (MediaQuery.of(context).size.width < ReponsiveUI.mobileMaxWidth)
+          Container()
+        else
+          SiderHeaderPage(
+            isEmailHeader: false,
+            alignment: Alignment.bottomLeft,
+            color: Theme.of(context).primaryColorDark,
+          ),
+        if (MediaQuery.of(context).size.width < ReponsiveUI.mobileMaxWidth)
+          Container()
+        else
+          SiderHeaderPage(
+            isEmailHeader: true,
+            alignment: Alignment.bottomRight,
+            color: Theme.of(context).primaryColorDark,
+          )
       ],
     );
   }
 
   ListView _homeListView(BuildContext context) {
     return ListView(
+      padding: EdgeInsets.zero,
       children: [
         _homeContent(
           content: const MainPage(),
@@ -58,6 +67,9 @@ class _HomeView extends StatelessWidget {
         _homeContent(
           content: const ExperiancePage(),
           context: context,
+          height: isMobileView(context: context)
+              ? MediaQuery.of(context).size.height * 0.7
+              : MediaQuery.of(context).size.height,
           color: Theme.of(context).primaryColorDark,
         ),
         _homeContent(
@@ -76,7 +88,10 @@ class _HomeView extends StatelessWidget {
           content: const FooterPage(),
           context: context,
           color: Theme.of(context).primaryColorDark,
-          height: MediaQuery.of(context).size.height * 0.1,
+          // color: Theme.of(context).primaryColorDark,
+          height: isMobileView(context: context)
+              ? MediaQuery.of(context).size.height * 0.3
+              : MediaQuery.of(context).size.height * 0.1,
         )
       ],
     );
