@@ -6,6 +6,7 @@ import 'package:portfolio/footer/views/footer_page.dart';
 import 'package:portfolio/header/views/side_header_page.dart';
 import 'package:portfolio/header/views/top_header_page.dart';
 import 'package:portfolio/main/views/main_page.dart';
+import 'package:portfolio/utilities/open_functions.dart';
 import 'package:portfolio/utilities/responsive_ui.dart';
 import 'package:portfolio/work/views/work_page.dart';
 
@@ -65,6 +66,9 @@ class _HomeView extends StatelessWidget {
         _homeContent(
           content: const ExperiancePage(),
           context: context,
+          height: isMobileView(context: context)
+              ? MediaQuery.of(context).size.height * 0.7
+              : MediaQuery.of(context).size.height,
           color: Theme.of(context).primaryColorDark,
         ),
         _homeContent(
