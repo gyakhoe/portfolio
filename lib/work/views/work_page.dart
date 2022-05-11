@@ -63,7 +63,6 @@ class WorkPage extends StatelessWidget {
               margin: const EdgeInsets.all(20),
               child: isMobileView(context: context)
                   ? ListView(
-                      physics: const NeverScrollableScrollPhysics(),
                       children: _additionalProjects(context, l10n),
                     )
                   : GridView.count(
