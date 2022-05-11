@@ -45,30 +45,40 @@ class TopHeaderPage extends StatelessWidget {
             Align(
               alignment: Alignment.centerRight,
               child: SizedBox(
-                width: 400,
-                child: Row(
-                  children: [
-                    _navItem(textToDisplay: l10n.navAboutTitle),
-                    _navItem(textToDisplay: l10n.navExperianceTitle),
-                    _navItem(textToDisplay: l10n.navWorkTitle),
-                    _navItem(textToDisplay: l10n.navContactTitle),
-                    MaterialButton(
-                      onPressed: () {},
-                      shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(10),
-                        side: const BorderSide(
-                          color: Colors.white,
-                          width: 2,
+                width: MediaQuery.of(context).size.width * 0.6,
+                child: Align(
+                  alignment: Alignment.centerRight,
+                  child: ListView(
+                    padding: const EdgeInsets.only(
+                      top: 35,
+                      bottom: 20,
+                      right: 10,
+                    ),
+                    scrollDirection: Axis.horizontal,
+                    shrinkWrap: true,
+                    children: [
+                      _navItem(textToDisplay: l10n.navAboutTitle),
+                      _navItem(textToDisplay: l10n.navExperianceTitle),
+                      _navItem(textToDisplay: l10n.navWorkTitle),
+                      _navItem(textToDisplay: l10n.navContactTitle),
+                      MaterialButton(
+                        onPressed: () {},
+                        shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(10),
+                          side: const BorderSide(
+                            color: Colors.white,
+                            width: 2,
+                          ),
                         ),
-                      ),
-                      child: Text(
-                        l10n.navResumeTitle,
-                        style: const TextStyle(
-                          color: Colors.white,
+                        child: Text(
+                          l10n.navResumeTitle,
+                          style: const TextStyle(
+                            color: Colors.white,
+                          ),
                         ),
-                      ),
-                    )
-                  ],
+                      )
+                    ],
+                  ),
                 ),
               ),
             ),

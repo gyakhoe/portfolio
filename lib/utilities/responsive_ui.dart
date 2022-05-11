@@ -1,4 +1,4 @@
 class ReponsiveUI {
-  static double mobileMaxWidth = 500;
+  static double mobileMaxWidth = 600;
   static double tabMaxWidth = 600;
 }

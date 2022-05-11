@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:portfolio/header/views/side_header_page.dart';
 import 'package:portfolio/l10n/l10n.dart';
 import 'package:portfolio/utilities/open_functions.dart';
 
