@@ -28,10 +28,9 @@ class SiderHeaderPage extends StatelessWidget {
         height: MediaQuery.of(context).size.height * 0.7,
         padding: const EdgeInsets.all(10),
         margin: const EdgeInsets.all(10),
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.end,
-          children: _isEmailHeader
-              ? [
+        child: _isEmailHeader
+            ? Column(
+                children: [
                   _headerVerticalDivider(),
                   Center(
                     child: RotatedBox(
@@ -48,49 +47,17 @@ class SiderHeaderPage extends StatelessWidget {
                       ),
                     ),
                   )
-                ]
-              : [
-                  _headerVerticalDivider(),
-                  IconButton(
-                    onPressed: () => appsLaunchGivenUrl(
-                      urlToLaunch: l10n.socialGithubUrl,
-                    ),
-                    icon: _socialIcon(icon: FontAwesomeIcons.github),
-                  ),
-                  IconButton(
-                    onPressed: () => appsLaunchGivenUrl(
-                      urlToLaunch: l10n.socialYoutubeUrl,
-                    ),
-                    icon: _socialIcon(icon: FontAwesomeIcons.youtube),
-                  ),
-                  IconButton(
-                    onPressed: () => appsLaunchGivenUrl(
-                      urlToLaunch: l10n.socialTwitterUrl,
-                    ),
-                    icon: _socialIcon(icon: FontAwesomeIcons.twitter),
-                  ),
-                  IconButton(
-                    onPressed: () => appsLaunchGivenUrl(
-                      urlToLaunch: l10n.socialInstagramUrl,
-                    ),
-                    icon: _socialIcon(icon: FontAwesomeIcons.instagram),
-                  ),
-                  IconButton(
-                    onPressed: () => appsLaunchGivenUrl(
-                      urlToLaunch: l10n.socialMediumURL,
-                    ),
-                    icon: _socialIcon(icon: FontAwesomeIcons.medium),
-                  ),
                 ],
-        ),
+              )
+            : Column(
+                children: [
+                  _headerVerticalDivider(),
+                  Column(
+                    children: socialWidget(l10n: l10n),
+                  )
+                ],
+              ),
       ),
-    );
-  }
-
-  FaIcon _socialIcon({required IconData icon}) {
-    return FaIcon(
-      icon,
-      color: Colors.white,
     );
   }
 

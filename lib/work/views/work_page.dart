@@ -170,11 +170,17 @@ class WorkPage extends StatelessWidget {
                   color: Colors.white,
                 ),
           ),
-          Text(
-            projectDetail,
-            style: Theme.of(context).textTheme.bodyText1!.copyWith(
-                  color: Colors.white,
-                ),
+          Wrap(
+            children: [
+              Text(
+                projectDetail,
+                overflow: TextOverflow.ellipsis,
+                maxLines: 3,
+                style: Theme.of(context).textTheme.bodyText1!.copyWith(
+                      color: Colors.white,
+                    ),
+              ),
+            ],
           ),
           Text(
             technologies,
@@ -240,13 +246,13 @@ class WorkPage extends StatelessWidget {
   }) {
     final l10n = context.l10n;
     return Expanded(
-      flex: isMobile ? 3 : 4,
+      flex: isMobile ? 2 : 4,
       child: Container(
         margin: const EdgeInsets.all(20),
         child: Stack(
           children: [
             Opacity(
-              opacity: isMobile ? 0.5 : 0,
+              opacity: isMobile ? 0.5 : 1,
               child: Align(
                 alignment:
                     isReversed ? Alignment.centerRight : Alignment.centerLeft,
@@ -301,6 +307,8 @@ class WorkPage extends StatelessWidget {
                       color: Colors.deepOrange,
                       child: Text(
                         projectDetail,
+                        maxLines: 4,
+                        overflow: TextOverflow.ellipsis,
                         style: Theme.of(context).textTheme.bodyText1?.copyWith(
                               color: Colors.white,
                             ),

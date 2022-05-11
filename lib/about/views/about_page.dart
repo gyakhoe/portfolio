@@ -69,8 +69,8 @@ class _AboutView extends StatelessWidget {
                               ?.copyWith(color: Colors.white)
                           : Theme.of(context)
                               .textTheme
-                              .headline6!
-                              .copyWith(color: Colors.white),
+                              .bodyText1!
+                              .copyWith(color: Colors.white, fontSize: 18),
                     ),
                   ),
                 ),

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:portfolio/header/views/side_header_page.dart';
 import 'package:portfolio/l10n/l10n.dart';
 import 'package:portfolio/utilities/open_functions.dart';
 
@@ -10,10 +11,20 @@ class FooterPage extends StatelessWidget {
     final l10n = context.l10n;
     return Container(
       padding: const EdgeInsets.all(10),
-      margin: const EdgeInsets.symmetric(horizontal: 100),
+      margin: isMobileView(context: context)
+          ? const EdgeInsets.symmetric(horizontal: 5)
+          : const EdgeInsets.symmetric(horizontal: 100),
       child: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
+        mainAxisAlignment: MainAxisAlignment.spaceAround,
+        mainAxisSize: MainAxisSize.min,
         children: [
+          if (isMobileView(context: context))
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: socialWidget(l10n: l10n),
+            )
+          else
+            const SizedBox(),
           TextButton(
             onPressed: () => appsLaunchGivenUrl(
               urlToLaunch: l10n.socialGyagueSonamGithubProfile,

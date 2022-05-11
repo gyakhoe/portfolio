@@ -52,6 +52,7 @@ class _HomeView extends StatelessWidget {
 
   ListView _homeListView(BuildContext context) {
     return ListView(
+      padding: EdgeInsets.zero,
       children: [
         _homeContent(
           content: const MainPage(),
@@ -87,7 +88,10 @@ class _HomeView extends StatelessWidget {
           content: const FooterPage(),
           context: context,
           color: Theme.of(context).primaryColorDark,
-          height: MediaQuery.of(context).size.height * 0.1,
+          // color: Theme.of(context).primaryColorDark,
+          height: isMobileView(context: context)
+              ? MediaQuery.of(context).size.height * 0.3
+              : MediaQuery.of(context).size.height * 0.1,
         )
       ],
     );
