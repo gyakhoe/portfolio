@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:portfolio/l10n/l10n.dart';
+import 'package:portfolio/utilities/responsive_ui.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 void appsLaunchGivenUrl({required String urlToLaunch}) {
@@ -24,4 +25,8 @@ void appsSendEmail({required BuildContext context}) {
     query: l10n.contactEmailSubject,
   );
   launchUrl(emailURI);
+}
+
+bool isMobileView({required BuildContext context}) {
+  return MediaQuery.of(context).size.width < ReponsiveUI.mobileMaxWidth;
 }
