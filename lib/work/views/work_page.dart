@@ -9,8 +9,12 @@ class WorkPage extends StatelessWidget {
   Widget build(BuildContext context) {
     final l10n = context.l10n;
     return Container(
-      margin: const EdgeInsets.all(100),
-      padding: const EdgeInsets.all(50),
+      margin: isMobileView(context: context)
+          ? const EdgeInsets.all(5)
+          : const EdgeInsets.all(100),
+      padding: isMobileView(context: context)
+          ? const EdgeInsets.all(5)
+          : const EdgeInsets.all(50),
       child: Column(
         children: [
           workHeading(
@@ -19,6 +23,7 @@ class WorkPage extends StatelessWidget {
           ),
           project(
             isReversed: false,
+            isMobile: isMobileView(context: context),
             context: context,
             imageAssetUrl: l10n.workTibtubeImageUrl,
             projectDetail: l10n.workTibtubeDetail,
@@ -28,6 +33,7 @@ class WorkPage extends StatelessWidget {
           ),
           project(
             isReversed: true,
+            isMobile: isMobileView(context: context),
             context: context,
             imageAssetUrl: l10n.workYoutubeImageUrl,
             projectDetail: l10n.workYoutubeDetail,
@@ -37,6 +43,7 @@ class WorkPage extends StatelessWidget {
           ),
           project(
             isReversed: false,
+            isMobile: isMobileView(context: context),
             context: context,
             imageAssetUrl: l10n.workGithubImageUrl,
             projectDetail: l10n.workGithubDetail,
@@ -51,54 +58,66 @@ class WorkPage extends StatelessWidget {
             dividerFlex: 4,
           ),
           Expanded(
-            flex: 6,
+            flex: isMobileView(context: context) ? 8 : 6,
             child: Container(
               margin: const EdgeInsets.all(20),
-              child: GridView.count(
-                crossAxisSpacing: 10,
-                childAspectRatio: 1.5,
-                mainAxisSpacing: 10,
-                crossAxisCount: 2,
-                children: <Widget>[
-                  additionalProject(
-                    context: context,
-                    projectIcon: Icons.voice_chat_outlined,
-                    projectUrl: l10n.workVoiceRecorderUrl,
-                    projectName: l10n.workVoiceRecorderTitle,
-                    projectDetail: l10n.workVoiceRecorderDetail,
-                    technologies: l10n.workVoiceRecorderTechnologies,
-                  ),
-                  additionalProject(
-                    context: context,
-                    projectIcon: Icons.folder_outlined,
-                    projectUrl: l10n.workAuthBlocUrl,
-                    projectName: l10n.workAuthBlocTitle,
-                    projectDetail: l10n.workAuthBlocDetail,
-                    technologies: l10n.workAuthBlocTechnologies,
-                  ),
-                  additionalProject(
-                    context: context,
-                    projectIcon: Icons.image_outlined,
-                    projectUrl: l10n.workGifMakerUrl,
-                    projectName: l10n.workGifMakerTitle,
-                    projectDetail: l10n.workGifMakerDetail,
-                    technologies: l10n.workGifMakerTechnologies,
-                  ),
-                  additionalProject(
-                    context: context,
-                    projectIcon: Icons.chat_outlined,
-                    projectUrl: l10n.workFlutterChatUrl,
-                    projectName: l10n.workFlutterChatTitle,
-                    projectDetail: l10n.workFlutterChatDetail,
-                    technologies: l10n.workFlutterChatTechnologies,
-                  )
-                ],
-              ),
+              child: isMobileView(context: context)
+                  ? ListView(
+                      physics: const NeverScrollableScrollPhysics(),
+                      children: _additionalProjects(context, l10n),
+                    )
+                  : GridView.count(
+                      crossAxisSpacing: 10,
+                      childAspectRatio: 1.5,
+                      mainAxisSpacing: 10,
+                      crossAxisCount: 2,
+                      children: _additionalProjects(context, l10n),
+                    ),
             ),
           )
         ],
       ),
     );
+  }
+
+  List<Widget> _additionalProjects(
+    BuildContext context,
+    AppLocalizations l10n,
+  ) {
+    return <Widget>[
+      additionalProject(
+        context: context,
+        projectIcon: Icons.voice_chat_outlined,
+        projectUrl: l10n.workVoiceRecorderUrl,
+        projectName: l10n.workVoiceRecorderTitle,
+        projectDetail: l10n.workVoiceRecorderDetail,
+        technologies: l10n.workVoiceRecorderTechnologies,
+      ),
+      additionalProject(
+        context: context,
+        projectIcon: Icons.folder_outlined,
+        projectUrl: l10n.workAuthBlocUrl,
+        projectName: l10n.workAuthBlocTitle,
+        projectDetail: l10n.workAuthBlocDetail,
+        technologies: l10n.workAuthBlocTechnologies,
+      ),
+      additionalProject(
+        context: context,
+        projectIcon: Icons.image_outlined,
+        projectUrl: l10n.workGifMakerUrl,
+        projectName: l10n.workGifMakerTitle,
+        projectDetail: l10n.workGifMakerDetail,
+        technologies: l10n.workGifMakerTechnologies,
+      ),
+      additionalProject(
+        context: context,
+        projectIcon: Icons.chat_outlined,
+        projectUrl: l10n.workFlutterChatUrl,
+        projectName: l10n.workFlutterChatTitle,
+        projectDetail: l10n.workFlutterChatDetail,
+        technologies: l10n.workFlutterChatTechnologies,
+      )
+    ];
   }
 
   Container additionalProject({
@@ -175,29 +194,37 @@ class WorkPage extends StatelessWidget {
     int? dividerFlex,
   }) {
     return Expanded(
-      child: Row(
-        children: [
-          Expanded(
-            flex: titleFlex ?? 4,
-            child: Text(
+      child: isMobileView(context: context)
+          ? Text(
               title,
               style: Theme.of(context)
                   .textTheme
-                  .headline4!
-                  .copyWith(color: Colors.white),
+                  .headline3
+                  ?.copyWith(color: Colors.white),
+            )
+          : Row(
+              children: [
+                Expanded(
+                  flex: titleFlex ?? 4,
+                  child: Text(
+                    title,
+                    style: Theme.of(context)
+                        .textTheme
+                        .headline4!
+                        .copyWith(color: Colors.white),
+                  ),
+                ),
+                Expanded(
+                  flex: dividerFlex ?? 6,
+                  child: const Divider(
+                    color: Colors.white,
+                    thickness: 2,
+                    indent: 20,
+                    endIndent: 100,
+                  ),
+                ),
+              ],
             ),
-          ),
-          Expanded(
-            flex: dividerFlex ?? 6,
-            child: const Divider(
-              color: Colors.white,
-              thickness: 2,
-              indent: 20,
-              endIndent: 100,
-            ),
-          ),
-        ],
-      ),
     );
   }
 
@@ -209,33 +236,37 @@ class WorkPage extends StatelessWidget {
     required String technologies,
     required String projectExternalUrl,
     required bool isReversed,
+    required bool isMobile,
   }) {
     final l10n = context.l10n;
     return Expanded(
-      flex: 4,
+      flex: isMobile ? 3 : 4,
       child: Container(
         margin: const EdgeInsets.all(20),
         child: Stack(
           children: [
-            Align(
-              alignment:
-                  isReversed ? Alignment.centerRight : Alignment.centerLeft,
-              child: Container(
-                decoration: const BoxDecoration(
-                  color: Colors.blueAccent,
-                  boxShadow: [
-                    BoxShadow(
-                      color: Colors.greenAccent,
-                      blurRadius: 3,
-                      offset: Offset(2, 2),
-                    ),
-                  ],
-                ),
-                height: 400,
-                width: 600,
-                child: Image.asset(
-                  imageAssetUrl,
-                  fit: BoxFit.fitHeight,
+            Opacity(
+              opacity: isMobile ? 0.5 : 0,
+              child: Align(
+                alignment:
+                    isReversed ? Alignment.centerRight : Alignment.centerLeft,
+                child: Container(
+                  decoration: const BoxDecoration(
+                    color: Colors.blueAccent,
+                    boxShadow: [
+                      BoxShadow(
+                        color: Colors.greenAccent,
+                        blurRadius: 3,
+                        offset: Offset(2, 2),
+                      ),
+                    ],
+                  ),
+                  height: 400,
+                  width: 600,
+                  child: Image.asset(
+                    imageAssetUrl,
+                    fit: BoxFit.fitHeight,
+                  ),
                 ),
               ),
             ),
@@ -254,13 +285,13 @@ class WorkPage extends StatelessWidget {
                   children: [
                     Text(
                       l10n.workFeatureProjectTitle,
-                      style: Theme.of(context).textTheme.headline5!.copyWith(
+                      style: Theme.of(context).textTheme.headline5?.copyWith(
                             color: Colors.white,
                           ),
                     ),
                     Text(
                       projectName,
-                      style: Theme.of(context).textTheme.headline6!.copyWith(
+                      style: Theme.of(context).textTheme.headline4!.copyWith(
                             color: Colors.white,
                           ),
                     ),
@@ -270,12 +301,8 @@ class WorkPage extends StatelessWidget {
                       color: Colors.deepOrange,
                       child: Text(
                         projectDetail,
-                        style: Theme.of(context)
-                            .textTheme
-                            .headlineMedium!
-                            .copyWith(
+                        style: Theme.of(context).textTheme.bodyText1?.copyWith(
                               color: Colors.white,
-                              fontSize: 15,
                             ),
                       ),
                     ),
