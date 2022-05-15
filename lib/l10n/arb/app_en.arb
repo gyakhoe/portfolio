@@ -290,6 +290,11 @@
         "description": "Design inspired from Brittany chang profile text in footer of portfolio"
     },
     "@@locale": "en",
+    "navTitle": "GYAKHOE",
+    "@navTitle": {
+        "description": "Title of the header"
+    },
+    "@@locale": "en",
     "navAboutTitle": "About",
     "@navAboutTitle": {
         "description": "Title for about button on navigation header"
