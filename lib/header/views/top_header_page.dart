@@ -1,107 +1,43 @@
 import 'package:flutter/material.dart';
 import 'package:portfolio/l10n/l10n.dart';
+import 'package:portfolio/navigation/views/navigation_view.dart';
+import 'package:portfolio/utilities/open_functions.dart';
 
-class TopHeaderPage extends StatelessWidget {
-  const TopHeaderPage({Key? key}) : super(key: key);
+class TopHeaderPage extends StatelessWidget implements PreferredSize {
+  const TopHeaderPage({
+    Key? key,
+    required double height,
+  })  : _height = height,
+        super(key: key);
+  final double _height;
 
   @override
   Widget build(BuildContext context) {
     final l10n = context.l10n;
-    return Align(
-      alignment: Alignment.topCenter,
-      child: Container(
-        decoration: BoxDecoration(
-          boxShadow: const [
-            BoxShadow(
-              color: Colors.white30,
-              offset: Offset(
-                0,
-                2,
-              ),
-              blurRadius: 2,
-              spreadRadius: 2,
-            ), //BoxShadow
-            BoxShadow(
-              color: Colors.white,
-            ),
-          ],
-          color: Theme.of(context).primaryColorDark,
+    return AppBar(
+      automaticallyImplyLeading: isMobileView(context: context),
+      toolbarHeight: _height,
+      backgroundColor: Theme.of(context).primaryColorDark,
+      title: TextButton(
+        child: Text(
+          l10n.navTitle,
+          style: const TextStyle(
+            fontWeight: FontWeight.bold,
+            color: Colors.white,
+            fontSize: 18,
+          ),
         ),
-        height: 100,
-        width: MediaQuery.of(context).size.width,
-        child: Stack(
-          children: [
-            const Align(
-              alignment: Alignment.centerLeft,
-              child: Padding(
-                padding: EdgeInsets.all(10),
-                child: Icon(
-                  Icons.language,
-                  color: Colors.white,
-                  size: 80,
-                ),
-              ),
-            ),
-            Align(
-              alignment: Alignment.centerRight,
-              child: SizedBox(
-                width: MediaQuery.of(context).size.width * 0.6,
-                child: Align(
-                  alignment: Alignment.centerRight,
-                  child: ListView(
-                    padding: const EdgeInsets.only(
-                      top: 35,
-                      bottom: 20,
-                      right: 10,
-                    ),
-                    scrollDirection: Axis.horizontal,
-                    shrinkWrap: true,
-                    children: [
-                      _navItem(textToDisplay: l10n.navAboutTitle),
-                      _navItem(textToDisplay: l10n.navExperianceTitle),
-                      _navItem(textToDisplay: l10n.navWorkTitle),
-                      _navItem(textToDisplay: l10n.navContactTitle),
-                      MaterialButton(
-                        onPressed: () {},
-                        shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(10),
-                          side: const BorderSide(
-                            color: Colors.white,
-                            width: 2,
-                          ),
-                        ),
-                        child: Text(
-                          l10n.navResumeTitle,
-                          style: const TextStyle(
-                            color: Colors.white,
-                          ),
-                        ),
-                      )
-                    ],
-                  ),
-                ),
-              ),
-            ),
-          ],
-        ),
+        onPressed: () {},
       ),
+      actions: isMobileView(context: context)
+          ? List.empty()
+          : navItems(context: context),
     );
   }
 
-  Widget _navItem({required String textToDisplay}) {
-    return Container(
-      margin: const EdgeInsets.all(10),
-      padding: const EdgeInsets.all(5),
-      child: Text(
-        textToDisplay,
-        style: _homeNavTextStyle(),
-      ),
-    );
-  }
+  @override
+  Widget get child => throw UnimplementedError();
 
-  TextStyle _homeNavTextStyle() {
-    return const TextStyle(
-      color: Colors.white,
-    );
-  }
+  @override
+  Size get preferredSize => Size.fromHeight(_height);
 }
