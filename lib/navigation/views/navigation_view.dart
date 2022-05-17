@@ -69,30 +69,37 @@ TextStyle _homeNavTextStyle() {
 
 Widget navResumeButton({required BuildContext context}) {
   final l10n = context.l10n;
-  return Padding(
-    padding: isMobileView(context: context)
-        ? const EdgeInsets.symmetric(
-            horizontal: 20,
-          )
-        : const EdgeInsets.symmetric(
-            horizontal: 10,
-            vertical: 20,
-          ),
-    child: MaterialButton(
-      onPressed: () {},
-      shape: RoundedRectangleBorder(
-        borderRadius: BorderRadius.circular(10),
-        side: const BorderSide(
-          color: Colors.white,
-          width: 2,
-        ),
-      ),
-      child: Text(
+
+  if (isMobileView(context: context)) {
+    return ListTile(
+      title: Text(
         l10n.navResumeTitle,
-        style: const TextStyle(
-          color: Colors.white,
+        style: _homeNavTextStyle(),
+      ),
+      onTap: () {},
+    );
+  } else {
+    return Padding(
+      padding: const EdgeInsets.symmetric(
+        horizontal: 10,
+        vertical: 20,
+      ),
+      child: MaterialButton(
+        onPressed: () {},
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.circular(10),
+          side: const BorderSide(
+            color: Colors.white,
+            width: 2,
+          ),
+        ),
+        child: Text(
+          l10n.navResumeTitle,
+          style: const TextStyle(
+            color: Colors.white,
+          ),
         ),
       ),
-    ),
-  );
+    );
+  }
 }

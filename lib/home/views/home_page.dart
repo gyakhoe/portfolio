@@ -89,8 +89,6 @@ class _HomeView extends StatelessWidget {
           _homeContent(
             content: const FooterPage(),
             context: context,
-            color: Theme.of(context).primaryColorDark,
-            // color: Theme.of(context).primaryColorDark,
             height: isMobileView(context: context)
                 ? MediaQuery.of(context).size.height * 0.3
                 : MediaQuery.of(context).size.height * 0.1,
