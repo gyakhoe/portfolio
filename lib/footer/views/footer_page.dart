@@ -8,46 +8,40 @@ class FooterPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final l10n = context.l10n;
-    return Container(
-      padding: const EdgeInsets.all(10),
-      margin: isMobileView(context: context)
-          ? const EdgeInsets.symmetric(horizontal: 5)
-          : const EdgeInsets.symmetric(horizontal: 100),
-      child: Column(
-        mainAxisAlignment: MainAxisAlignment.spaceAround,
-        mainAxisSize: MainAxisSize.min,
-        children: [
-          if (isMobileView(context: context))
-            Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: socialWidget(l10n: l10n),
-            )
-          else
-            const SizedBox(),
-          TextButton(
-            onPressed: () => appsLaunchGivenUrl(
-              urlToLaunch: l10n.socialGyagueSonamGithubProfile,
-            ),
-            child: Text(
-              l10n.footerBuiltByText,
-              style: const TextStyle(
-                color: Colors.white,
-              ),
+    return Column(
+      mainAxisAlignment: MainAxisAlignment.spaceAround,
+      mainAxisSize: MainAxisSize.min,
+      children: [
+        if (isMobileView(context: context))
+          Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: socialWidget(l10n: l10n),
+          )
+        else
+          const SizedBox(),
+        TextButton(
+          onPressed: () => appsLaunchGivenUrl(
+            urlToLaunch: l10n.socialGyagueSonamGithubProfile,
+          ),
+          child: Text(
+            l10n.footerBuiltByText,
+            style: const TextStyle(
+              color: Colors.white,
             ),
           ),
-          TextButton(
-            onPressed: () => appsLaunchGivenUrl(
-              urlToLaunch: l10n.socialBrittanyGithubProfile,
+        ),
+        TextButton(
+          onPressed: () => appsLaunchGivenUrl(
+            urlToLaunch: l10n.socialBrittanyGithubProfile,
+          ),
+          child: Text(
+            l10n.footerDesignByText,
+            style: const TextStyle(
+              color: Colors.white,
             ),
-            child: Text(
-              l10n.footerDesignByText,
-              style: const TextStyle(
-                color: Colors.white,
-              ),
-            ),
-          )
-        ],
-      ),
+          ),
+        )
+      ],
     );
   }
 }

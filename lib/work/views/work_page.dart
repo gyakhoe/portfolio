@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:portfolio/l10n/l10n.dart';
 import 'package:portfolio/utilities/open_functions.dart';
 
@@ -8,74 +9,66 @@ class WorkPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final l10n = context.l10n;
-    return Container(
-      margin: isMobileView(context: context)
-          ? const EdgeInsets.all(5)
-          : const EdgeInsets.all(100),
-      padding: isMobileView(context: context)
-          ? const EdgeInsets.all(5)
-          : const EdgeInsets.all(50),
-      child: Column(
-        children: [
-          workHeading(
-            context: context,
-            title: l10n.workTitleText,
+    return Column(
+      children: [
+        workHeading(
+          context: context,
+          title: l10n.workTitleText,
+        ),
+        project(
+          isReversed: false,
+          isMobile: isMobileView(context: context),
+          context: context,
+          imageAssetUrl: l10n.workTibtubeImageUrl,
+          projectDetail: l10n.workTibtubeDetail,
+          projectExternalUrl: l10n.workTibtubeUrl,
+          projectName: l10n.workTibtubeProjectTitle,
+          technologies: l10n.workTibtubeTechnologies,
+        ),
+        project(
+          isReversed: true,
+          isMobile: isMobileView(context: context),
+          context: context,
+          imageAssetUrl: l10n.workYoutubeImageUrl,
+          projectDetail: l10n.workYoutubeDetail,
+          projectExternalUrl: l10n.workYoutubeUrl,
+          projectName: l10n.workYoutubeProjectName,
+          technologies: l10n.workYoutubetechnologies,
+        ),
+        project(
+          isReversed: false,
+          isMobile: isMobileView(context: context),
+          context: context,
+          imageAssetUrl: l10n.workGithubImageUrl,
+          projectDetail: l10n.workGithubDetail,
+          projectExternalUrl: l10n.workGithubProejctUrl,
+          projectName: l10n.workGithubProjectName,
+          technologies: l10n.workGithubTechnologies,
+        ),
+        workHeading(
+          context: context,
+          title: l10n.workSecondaryTitleText,
+          titleFlex: 3,
+          dividerFlex: 4,
+        ),
+        Expanded(
+          flex: isMobileView(context: context) ? 8 : 6,
+          child: Container(
+            margin: const EdgeInsets.all(20),
+            child: isMobileView(context: context)
+                ? ListView(
+                    children: _additionalProjects(context, l10n),
+                  )
+                : GridView.count(
+                    crossAxisSpacing: 10,
+                    childAspectRatio: 1.5,
+                    mainAxisSpacing: 10,
+                    crossAxisCount: 2,
+                    children: _additionalProjects(context, l10n),
+                  ),
           ),
-          project(
-            isReversed: false,
-            isMobile: isMobileView(context: context),
-            context: context,
-            imageAssetUrl: l10n.workTibtubeImageUrl,
-            projectDetail: l10n.workTibtubeDetail,
-            projectExternalUrl: l10n.workTibtubeUrl,
-            projectName: l10n.workTibtubeProjectTitle,
-            technologies: l10n.workTibtubeTechnologies,
-          ),
-          project(
-            isReversed: true,
-            isMobile: isMobileView(context: context),
-            context: context,
-            imageAssetUrl: l10n.workYoutubeImageUrl,
-            projectDetail: l10n.workYoutubeDetail,
-            projectExternalUrl: l10n.workYoutubeUrl,
-            projectName: l10n.workYoutubeProjectName,
-            technologies: l10n.workYoutubetechnologies,
-          ),
-          project(
-            isReversed: false,
-            isMobile: isMobileView(context: context),
-            context: context,
-            imageAssetUrl: l10n.workGithubImageUrl,
-            projectDetail: l10n.workGithubDetail,
-            projectExternalUrl: l10n.workGithubProejctUrl,
-            projectName: l10n.workGithubProjectName,
-            technologies: l10n.workGithubTechnologies,
-          ),
-          workHeading(
-            context: context,
-            title: l10n.workSecondaryTitleText,
-            titleFlex: 3,
-            dividerFlex: 4,
-          ),
-          Expanded(
-            flex: isMobileView(context: context) ? 8 : 6,
-            child: Container(
-              margin: const EdgeInsets.all(20),
-              child: isMobileView(context: context)
-                  ? ListView(
-                      children: _additionalProjects(context, l10n),
-                    )
-                  : GridView.count(
-                      crossAxisSpacing: 10,
-                      childAspectRatio: 1.5,
-                      mainAxisSpacing: 10,
-                      crossAxisCount: 2,
-                      children: _additionalProjects(context, l10n),
-                    ),
-            ),
-          )
-        ],
-      ),
+        )
+      ],
     );
   }
 
@@ -199,13 +192,17 @@ class WorkPage extends StatelessWidget {
     int? dividerFlex,
   }) {
     return Expanded(
+      flex: 2,
       child: isMobileView(context: context)
-          ? Text(
-              title,
-              style: Theme.of(context)
-                  .textTheme
-                  .headline3
-                  ?.copyWith(color: Colors.white),
+          ? Center(
+              child: Text(
+                title,
+                textAlign: TextAlign.center,
+                style: Theme.of(context)
+                    .textTheme
+                    .headline3
+                    ?.copyWith(color: Colors.white),
+              ),
             )
           : Row(
               children: [
@@ -245,32 +242,36 @@ class WorkPage extends StatelessWidget {
   }) {
     final l10n = context.l10n;
     return Expanded(
-      flex: isMobile ? 2 : 4,
+      flex: 4,
       child: Container(
         margin: const EdgeInsets.all(20),
         child: Stack(
           children: [
-            Opacity(
-              opacity: isMobile ? 0.5 : 1,
-              child: Align(
-                alignment:
-                    isReversed ? Alignment.centerRight : Alignment.centerLeft,
-                child: Container(
-                  decoration: const BoxDecoration(
-                    color: Colors.blueAccent,
-                    boxShadow: [
-                      BoxShadow(
-                        color: Colors.greenAccent,
-                        blurRadius: 3,
-                        offset: Offset(2, 2),
-                      ),
-                    ],
-                  ),
-                  height: 400,
-                  width: 600,
-                  child: Image.asset(
-                    imageAssetUrl,
-                    fit: BoxFit.fitHeight,
+            Align(
+              alignment:
+                  isReversed ? Alignment.centerRight : Alignment.centerLeft,
+              child: Container(
+                decoration: const BoxDecoration(
+                  color: Colors.blueAccent,
+                  boxShadow: [
+                    BoxShadow(
+                      color: Colors.greenAccent,
+                      blurRadius: 5,
+                      blurStyle: BlurStyle.outer,
+                      offset: Offset(5, 5),
+                    ),
+                  ],
+                ),
+                height: 400,
+                width: 600,
+                child: Opacity(
+                  opacity: isMobile ? 0.4 : 1,
+                  child: Container(
+                    color: Colors.black,
+                    child: Image.asset(
+                      imageAssetUrl,
+                      fit: BoxFit.cover,
+                    ),
                   ),
                 ),
               ),
@@ -322,11 +323,11 @@ class WorkPage extends StatelessWidget {
                     IconButton(
                       onPressed: () =>
                           appsLaunchGivenUrl(urlToLaunch: projectExternalUrl),
-                      icon: const Icon(
-                        Icons.rocket_launch,
+                      icon: const FaIcon(
+                        FontAwesomeIcons.arrowUpRightFromSquare,
                         color: Colors.white,
                       ),
-                    ),
+                    )
                   ],
                 ),
               ),
