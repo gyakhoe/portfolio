@@ -67,12 +67,10 @@ class _HomeView extends StatelessWidget {
         _homeContent(
           content: const MainPage(),
           context: context,
-          color: Theme.of(context).primaryColorDark,
         ),
         _homeContent(
           content: const AboutPage(),
           context: context,
-          color: Theme.of(context).primaryColorDark,
         ),
         _homeContent(
           content: const ExperiancePage(),
@@ -80,7 +78,6 @@ class _HomeView extends StatelessWidget {
           height: isMobileView(context: context)
               ? MediaQuery.of(context).size.height * 0.7
               : MediaQuery.of(context).size.height,
-          color: Theme.of(context).primaryColorDark,
         ),
         _homeContent(
           content: const WorkPage(),
@@ -110,13 +107,16 @@ class _HomeView extends StatelessWidget {
   Container _homeContent({
     required Widget content,
     required BuildContext context,
-    required Color color,
+    Color? color,
     double? height,
   }) {
     return Container(
-      height: height ?? MediaQuery.of(context).size.height,
       width: MediaQuery.of(context).size.width,
-      color: color,
+      height: height ?? MediaQuery.of(context).size.height,
+      padding: isMobileView(context: context)
+          ? const EdgeInsets.all(10)
+          : const EdgeInsets.symmetric(horizontal: 100, vertical: 10),
+      color: color ?? Theme.of(context).primaryColorDark,
       child: Center(
         child: content,
       ),
