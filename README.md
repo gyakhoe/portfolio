@@ -1,7 +1,7 @@
 # Portfolio
 
 ## Credits
-Desing inspiration from : http://brittanychiang.com/
+Desing inspiration from : http://brittanychiang.com/  
 Loading GIF from: https://media.giphy.com/media/FaAxdPWZ7HKGmlnku7/giphy.gif
 
 ![coverage][coverage_badge]
