@@ -5,9 +5,13 @@ import 'package:portfolio/experiance/views/experiance_page.dart';
 import 'package:portfolio/footer/views/footer_page.dart';
 import 'package:portfolio/header/views/side_header_page.dart';
 import 'package:portfolio/header/views/top_header_page.dart';
+import 'package:portfolio/home/views/home_desktop_view.dart';
+import 'package:portfolio/home/views/home_mobile_view.dart';
+import 'package:portfolio/home/views/home_tab_view.dart';
 import 'package:portfolio/main/views/main_page.dart';
 import 'package:portfolio/navigation/views/navigation_view.dart';
 import 'package:portfolio/utilities/open_functions.dart';
+import 'package:portfolio/utilities/responsive_view.dart';
 import 'package:portfolio/work/views/work_page.dart';
 
 class HomePage extends StatelessWidget {
@@ -15,18 +19,23 @@ class HomePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      drawer: Drawer(
-        backgroundColor: Theme.of(context).primaryColorDark,
-        child: ListView(
-          children: navItems(context: context),
-        ),
-      ),
-      appBar: TopHeaderPage(
-        height: isMobileView(context: context) ? 56 : 80,
-      ),
-      body: const _HomeView(),
+    return const ResponsiveView(
+      mobileView: HomeMobileView(),
+      tabView: HometabView(),
+      desktopView: HomeDesktopView(),
     );
+    // return Scaffold(
+    //   drawer: Drawer(
+    //     backgroundColor: Theme.of(context).primaryColorDark,
+    //     child: ListView(
+    //       children: navItems(context: context),
+    //     ),
+    //   ),
+    //   appBar: TopHeaderPage(
+    //     height: isMobileView(context: context) ? 56 : 80,
+    //   ),
+    //   body: const _HomeView(),
+    // );
   }
 }
 
