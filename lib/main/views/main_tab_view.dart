@@ -3,23 +3,27 @@ import 'package:portfolio/l10n/l10n.dart';
 import 'package:portfolio/utilities/open_functions.dart';
 
 class MainTabView extends StatelessWidget {
-  const MainTabView({Key? key}) : super(key: key);
+  const MainTabView({
+    Key? key,
+    required AppLocalizations l10n,
+  })  : _l10n = l10n,
+        super(key: key);
+  final AppLocalizations _l10n;
 
   @override
   Widget build(BuildContext context) {
-    final l10n = context.l10n;
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
         Text(
-          l10n.mainTitle,
+          _l10n.mainTitle,
           style: Theme.of(context).textTheme.headlineSmall?.copyWith(
                 color: Colors.white,
               ),
         ),
         Text(
-          l10n.mainNameTitle,
+          _l10n.mainNameTitle,
           style: Theme.of(context)
               .textTheme
               .headline2
@@ -28,7 +32,7 @@ class MainTabView extends StatelessWidget {
         Padding(
           padding: const EdgeInsets.all(10),
           child: Text(
-            l10n.mainWorkTitle,
+            _l10n.mainWorkTitle,
             style: Theme.of(context).textTheme.headline4?.copyWith(
                   color: Colors.white,
                   letterSpacing: 10,
@@ -36,14 +40,14 @@ class MainTabView extends StatelessWidget {
           ),
         ),
         Text(
-          l10n.mainWorkDetailTitle,
+          _l10n.mainWorkDetailTitle,
           style: Theme.of(context).textTheme.headline6?.copyWith(
                 color: Colors.white,
               ),
         ),
         const SizedBox(height: 30),
         Row(
-          children: socialWidget(l10n: l10n),
+          children: socialWidget(l10n: _l10n),
         ),
         const SizedBox(height: 30),
         MaterialButton(
@@ -55,12 +59,12 @@ class MainTabView extends StatelessWidget {
             ),
           ),
           onPressed: () => appsLaunchGivenUrl(
-            urlToLaunch: l10n.workYoutubeUrl,
+            urlToLaunch: _l10n.workYoutubeUrl,
           ),
           child: Container(
             padding: const EdgeInsets.all(10),
             child: Text(
-              l10n.mainYoutubeButtonTitle,
+              _l10n.mainYoutubeButtonTitle,
               style: Theme.of(context)
                   .textTheme
                   .bodyLarge
