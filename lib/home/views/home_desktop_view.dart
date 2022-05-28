@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:portfolio/header/views/side_header_page.dart';
+import 'package:portfolio/home/views/home_content_view.dart';
 import 'package:portfolio/l10n/l10n.dart';
 import 'package:portfolio/navigation/views/navigation_view.dart';
 
@@ -23,11 +24,11 @@ class HomeDesktopView extends StatelessWidget {
         ),
         actions: navItems(context: context),
       ),
-      body: Container(
-        color: Colors.pink,
+      body: SizedBox(
         width: MediaQuery.of(context).size.width,
         child: Stack(
           children: const [
+            HomeContentView(),
             Align(
               alignment: Alignment.bottomLeft,
               child: SiderHeaderPage(

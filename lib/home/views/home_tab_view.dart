@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:portfolio/home/views/home_content_view.dart';
 import 'package:portfolio/l10n/l10n.dart';
 import 'package:portfolio/navigation/views/navigation_view.dart';
 
@@ -25,7 +26,10 @@ class HometabView extends StatelessWidget {
           ),
         ),
       ),
-      body: Container(),
+      body: SizedBox(
+        width: MediaQuery.of(context).size.width,
+        child: const HomeContentView(),
+      ),
     );
   }
 }
