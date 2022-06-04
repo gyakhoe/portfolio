@@ -60,8 +60,6 @@ class HomeContentView extends StatelessWidget {
     Color? color,
     double? height,
   }) {
-    //TODO: I have to move all the constraints from here to responsive layout.
-    //TODO:  view specific port is required
     return Container(
       width: MediaQuery.of(context).size.width,
       height: height ?? MediaQuery.of(context).size.height,
