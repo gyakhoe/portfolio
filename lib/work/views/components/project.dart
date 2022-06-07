@@ -67,7 +67,7 @@ class Project extends StatelessWidget {
               alignment:
                   isReversed ? Alignment.centerLeft : Alignment.centerRight,
               child: SizedBox(
-                height: 300,
+                height: 400,
                 width: 400,
                 // color: Colors.purpleAccent,
                 child: Column(
@@ -94,7 +94,7 @@ class Project extends StatelessWidget {
                       color: Colors.deepOrange,
                       child: Text(
                         projectDetail,
-                        maxLines: 4,
+                        maxLines: 3,
                         overflow: TextOverflow.ellipsis,
                         style: Theme.of(context).textTheme.bodyText1?.copyWith(
                               color: Colors.white,

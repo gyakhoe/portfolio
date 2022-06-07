@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/rendering.dart';
 import 'package:portfolio/experiance/views/components/experiance_detail.dart';
 import 'package:portfolio/l10n/l10n.dart';
 import 'package:portfolio/utilities/app_cinfiguration.dart';
