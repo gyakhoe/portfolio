@@ -12,8 +12,9 @@ class ExperiancePage extends StatelessWidget {
   Widget build(BuildContext context) {
     final l10n = context.l10n;
     return ResponsiveView(
-        mobileView: ExperianceMobileView(l10n: l10n),
-        tabView: ExperianceTabView(l10n: l10n),
-        desktopView: ExperianceDesktopView(l10n: l10n));
+      mobileView: ExperianceMobileView(l10n: l10n),
+      tabView: ExperianceTabView(l10n: l10n),
+      desktopView: ExperianceDesktopView(l10n: l10n),
+    );
   }
 }
