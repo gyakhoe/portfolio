@@ -3,6 +3,7 @@ import 'package:portfolio/about/views/about_page.dart';
 import 'package:portfolio/contact/views/contact_page.dart';
 import 'package:portfolio/experiance/views/experiance_page.dart';
 import 'package:portfolio/footer/views/footer_page.dart';
+import 'package:portfolio/l10n/l10n.dart';
 import 'package:portfolio/main/views/main_page.dart';
 import 'package:portfolio/utilities/open_functions.dart';
 import 'package:portfolio/work/views/work_page.dart';
@@ -12,15 +13,13 @@ class HomeContentView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final l10n = context.l10n;
     return Container(
       color: Theme.of(context).primaryColorDark,
       child: ListView(
         shrinkWrap: true,
         children: [
-          _homeContent(
-            content: const MainPage(),
-            context: context,
-          ),
+          MainPage(l10n: l10n),
           _homeContent(
             content: const AboutPage(),
             context: context,

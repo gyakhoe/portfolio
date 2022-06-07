@@ -30,7 +30,7 @@ void appsSendEmail({required BuildContext context}) {
 }
 
 bool isMobileView({required BuildContext context}) {
-  return MediaQuery.of(context).size.width <= AppConfiguration.kTabletMaxWidth;
+  return MediaQuery.of(context).size.width <= kTabletMaxWidth;
 }
 
 List<Widget> socialWidget({
