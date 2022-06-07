@@ -19,11 +19,8 @@ class HomeContentView extends StatelessWidget {
       child: ListView(
         shrinkWrap: true,
         children: [
+          AboutPage(l10n: l10n),
           MainPage(l10n: l10n),
-          _homeContent(
-            content: const AboutPage(),
-            context: context,
-          ),
           _homeContent(
             content: const ExperiancePage(),
             context: context,

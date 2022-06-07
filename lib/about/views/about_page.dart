@@ -6,7 +6,12 @@ import 'package:portfolio/l10n/l10n.dart';
 import 'package:portfolio/utilities/responsive_view.dart';
 
 class AboutPage extends StatelessWidget {
-  const AboutPage({Key? key}) : super(key: key);
+  const AboutPage({
+    Key? key,
+    required this.l10n,
+  }) : super(key: key);
+
+  final AppLocalizations l10n;
 
   @override
   Widget build(BuildContext context) {
