@@ -6,11 +6,14 @@ import 'package:portfolio/main/views/main_tab_view.dart';
 import 'package:portfolio/utilities/responsive_view.dart';
 
 class MainPage extends StatelessWidget {
-  const MainPage({Key? key}) : super(key: key);
+  const MainPage({
+    Key? key,
+    required this.l10n,
+  }) : super(key: key);
+  final AppLocalizations l10n;
 
   @override
   Widget build(BuildContext context) {
-    final l10n = context.l10n;
     return ResponsiveView(
       mobileView: MainMobileView(
         l10n: l10n,

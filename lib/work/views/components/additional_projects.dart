@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:portfolio/utilities/open_functions.dart';
 
 class AdditionalProject extends StatelessWidget {
@@ -49,8 +50,8 @@ class AdditionalProject extends StatelessWidget {
               ),
               IconButton(
                 onPressed: () => appsLaunchGivenUrl(urlToLaunch: projectUrl),
-                icon: const Icon(
-                  Icons.link_outlined,
+                icon: const FaIcon(
+                  FontAwesomeIcons.arrowUpRightFromSquare,
                   color: Colors.white,
                   size: 30,
                 ),

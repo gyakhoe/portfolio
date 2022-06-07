@@ -19,10 +19,10 @@ class ResponsiveView extends StatelessWidget {
   Widget build(BuildContext context) {
     return LayoutBuilder(
       builder: (context, constraints) {
-        if (constraints.maxWidth <= AppConfiguration.kMobileMaxWidth) {
+        if (constraints.maxWidth <= kMobileMaxWidth) {
           log('Is mobile ${constraints.maxWidth}');
           return mobileView;
-        } else if (constraints.maxWidth <= AppConfiguration.kTabletMaxWidth) {
+        } else if (constraints.maxWidth <= kTabletMaxWidth) {
           log('Is tab ${constraints.maxWidth}');
           return tabView;
         } else {

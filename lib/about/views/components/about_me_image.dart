@@ -6,15 +6,21 @@ class AboutMeImage extends StatelessWidget {
     Key? key,
     required this.context,
     required AppLocalizations l10n,
+    required this.height,
+    this.width,
   })  : _l10n = l10n,
         super(key: key);
 
   final BuildContext context;
   final AppLocalizations _l10n;
+  final double height;
+  final double? width;
 
   @override
   Widget build(BuildContext context) {
-    return Expanded(
+    return SizedBox(
+      height: height,
+      width: width ?? MediaQuery.of(context).size.width,
       child: Stack(
         children: [
           Align(
