@@ -24,7 +24,6 @@ class WorkDesktopView extends StatelessWidget {
         vertical: kDesktopVerticalPadding,
         horizontal: kDesktopHorizontalPadding,
       ),
-      color: Colors.pink,
       child: Column(
         children: [
           WorkHeading(context: context, title: l10n.workTitleText),

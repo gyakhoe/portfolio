@@ -20,7 +20,6 @@ class WorkTabView extends StatelessWidget {
         minHeight: 1000,
         maxHeight: 1600,
       ),
-      color: Colors.pink,
       padding: const EdgeInsets.all(kTabDefaultPadding),
       child: Column(
         children: [
