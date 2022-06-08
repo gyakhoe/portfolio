@@ -3,7 +3,7 @@
 This is web application bluit using Flutter. The Web App is for personal portfolio for any developer but specailly for Flutter App Developer.
 
 ## Images
-[Main Mobile View](https://github.com/gyakhoe/repo-datas/blob/main/images/portfolio/mobile-main.png)
+[Main Mobile View](https://github.com/gyakhoe/repo-datas/blob/main/images/portfolio/desktop-contact.png?raw=true)
 
 ## Credits
 Desing inspiration from : http://brittanychiang.com/  
