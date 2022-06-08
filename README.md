@@ -1,4 +1,6 @@
 # Portfolio
+---
+This is web application bluit using Flutter. The Web App is for personal portfolio for any developer but specailly for Flutter App Developer.
 
 ## Credits
 Desing inspiration from : http://brittanychiang.com/  
