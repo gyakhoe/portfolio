@@ -4,6 +4,9 @@
 Desing inspiration from : http://brittanychiang.com/  
 Loading GIF from: https://media.giphy.com/media/FaAxdPWZ7HKGmlnku7/giphy.gif
 
+
+### Very God CLI Details
+
 ![coverage][coverage_badge]
 [![style: very good analysis][very_good_analysis_badge]][very_good_analysis_link]
 [![License: MIT][license_badge]][license_link]
