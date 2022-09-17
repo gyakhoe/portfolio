@@ -34,7 +34,7 @@ List<Widget> _navItemToDisplay({required BuildContext context}) {
   final l10n = context.l10n;
   return [
     _navItem(textToDisplay: l10n.navAboutTitle, context: context),
-    _navItem(textToDisplay: l10n.navExperianceTitle, context: context),
+    _navItem(textToDisplay: l10n.navExperienceTitle, context: context),
     _navItem(textToDisplay: l10n.navWorkTitle, context: context),
     _navItem(textToDisplay: l10n.navContactTitle, context: context),
   ];

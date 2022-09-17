@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:portfolio/experiance/views/components/experiance_detail.dart';
+import 'package:portfolio/experience/views/components/experience_detail.dart';
 import 'package:portfolio/l10n/l10n.dart';
 import 'package:portfolio/utilities/app_cinfiguration.dart';
 
-class ExperianceTabView extends StatelessWidget {
-  const ExperianceTabView({
+class ExperienceTabView extends StatelessWidget {
+  const ExperienceTabView({
     Key? key,
     required this.l10n,
   }) : super(key: key);
@@ -19,7 +19,7 @@ class ExperianceTabView extends StatelessWidget {
         children: [
           Center(
             child: Text(
-              l10n.experianceTitle,
+              l10n.experienceTitle,
               style: Theme.of(context)
                   .textTheme
                   .headline2
@@ -32,7 +32,7 @@ class ExperianceTabView extends StatelessWidget {
             endIndent: kTabDefaultPadding,
             indent: kDesktopDefaultPadding,
           ),
-          ExperianceDetail(
+          ExperienceDetail(
             context: context,
             l10n: l10n,
           ),

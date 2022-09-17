@@ -45,29 +45,34 @@
         "description": "Detail about me in portfolio"
     },
     "@@locale": "en",
-    "experianceTitle": "Where I've worked",
-    "@experianceTitle": {
-        "description": "Title of the experiance page."
+    "experienceTitle": "Where I've worked",
+    "@experienceTitle": {
+        "description": "Title of the experience page."
     },
     "@@locale": "en",
-    "experiancePresent": "2020 - Present: Indie Flutter App developer and making Youtube content.",
-    "@experiancePresent": {
+    "experiencePresent": "2020 - Present: Indie Flutter App developer and making Youtube content.",
+    "@experiencePresent": {
         "description": "Exp from 2019 to present"
     },
     "@@locale": "en",
-    "experiance2019": "2016 - 2019: Senior Project Engineer at Wipro Ltd.",
-    "@experiance2019": {
+    "experience2019": "2016 - 2019: Senior Project Engineer at Wipro Ltd.",
+    "@experience2019": {
         "description": "Exp from 2016 to 2019"
     },
     "@@locale": "en",
-    "experiance2016": "2012 - 2016: Project Engineer at Wipro Ltd.",
-    "@experiance2016": {
-        "description": "2012 to 2016 experiances "
+    "experience2016": "2012 - 2016: Project Engineer at Wipro Ltd.",
+    "@experience2016": {
+        "description": "2012 to 2016 experiences "
     },
     "@@locale": "en",
-    "experiance2012": "2009-2012: Bachelors in Computer Application.",
-    "@experiance2012": {
-        "description": "2009 to 2012 experiances"
+    "experienceStudy2016": "2012 - 2016: Master in Software Engineering.",
+    "@experienceStudy2016": {
+        "description": "2012 to 2016 Study experiences "
+    },
+    "@@locale": "en",
+    "experience2012": "2009-2012: Bachelors in Computer Application.",
+    "@experience2012": {
+        "description": "2009 to 2012 experiences"
     },
     "@@locale": "en",
     "workTitleText": "Some Things I've built",
@@ -300,9 +305,9 @@
         "description": "Title for about button on navigation header"
     },
     "@@locale": "en",
-    "navExperianceTitle": "Experiance",
-    "@navExperianceTitle": {
-        "description": "Title for experiance button navigation header"
+    "navExperienceTitle": "Experience",
+    "@navExperienceTitle": {
+        "description": "Title for experience button navigation header"
     },
     "@@locale": "en",
     "navWorkTitle": "Work",

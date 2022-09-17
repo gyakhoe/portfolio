@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:portfolio/experiance/views/components/experiance_detail.dart';
+import 'package:portfolio/experience/views/components/experience_detail.dart';
 import 'package:portfolio/l10n/l10n.dart';
 import 'package:portfolio/utilities/app_cinfiguration.dart';
 
-class ExperianceDesktopView extends StatelessWidget {
-  const ExperianceDesktopView({Key? key, required this.l10n}) : super(key: key);
+class ExperienceDesktopView extends StatelessWidget {
+  const ExperienceDesktopView({Key? key, required this.l10n}) : super(key: key);
 
   final AppLocalizations l10n;
 
@@ -22,7 +22,7 @@ class ExperianceDesktopView extends StatelessWidget {
           Row(
             children: [
               Text(
-                l10n.experianceTitle,
+                l10n.experienceTitle,
                 style: Theme.of(context).textTheme.headline4?.copyWith(
                       color: Colors.white,
                       fontWeight: FontWeight.bold,
@@ -41,7 +41,7 @@ class ExperianceDesktopView extends StatelessWidget {
               ),
             ],
           ),
-          ExperianceDetail(context: context, l10n: l10n),
+          ExperienceDetail(context: context, l10n: l10n),
         ],
       ),
     );

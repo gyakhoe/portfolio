@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:portfolio/l10n/l10n.dart';
 import 'package:portfolio/utilities/open_functions.dart';
 
-class ExperianceDetail extends StatelessWidget {
-  const ExperianceDetail({
+class ExperienceDetail extends StatelessWidget {
+  const ExperienceDetail({
     Key? key,
     required this.context,
     required this.l10n,
@@ -29,7 +29,7 @@ class ExperianceDetail extends StatelessWidget {
             padding: const EdgeInsets.all(20),
             color: Colors.grey,
             child: Text(
-              l10n.experiancePresent,
+              l10n.experiencePresent,
               style: Theme.of(context).textTheme.bodyLarge!.copyWith(
                     color: Colors.white,
                   ),
@@ -38,7 +38,7 @@ class ExperianceDetail extends StatelessWidget {
           Container(
             padding: const EdgeInsets.all(20),
             child: Text(
-              l10n.experiance2019,
+              l10n.experience2019,
               style: Theme.of(context).textTheme.bodyLarge!.copyWith(
                     color: Colors.white,
                   ),
@@ -48,7 +48,7 @@ class ExperianceDetail extends StatelessWidget {
             padding: const EdgeInsets.all(20),
             color: Colors.grey,
             child: Text(
-              l10n.experiance2016,
+              l10n.experience2016,
               style: Theme.of(context).textTheme.bodyLarge!.copyWith(
                     color: Colors.white,
                   ),
@@ -57,7 +57,17 @@ class ExperianceDetail extends StatelessWidget {
           Container(
             padding: const EdgeInsets.all(20),
             child: Text(
-              l10n.experiance2012,
+              l10n.experienceStudy2016,
+              style: Theme.of(context).textTheme.bodyLarge!.copyWith(
+                    color: Colors.white,
+                  ),
+            ),
+          ),
+          Container(
+            padding: const EdgeInsets.all(20),
+            color: Colors.grey,
+            child: Text(
+              l10n.experience2012,
               style: Theme.of(context).textTheme.bodyLarge!.copyWith(
                     color: Colors.white,
                   ),
