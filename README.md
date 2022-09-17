@@ -1,8 +1,18 @@
 # Portfolio
 
+This is web application bluit using Flutter. The Web App is for personal portfolio for any developer but specailly for Flutter App Developer.
+
+## Images
+![Main Mobile View](https://github.com/gyakhoe/repo-datas/blob/main/images/portfolio/mobile-main.png?raw=true)
+![Main Tab View](https://github.com/gyakhoe/repo-datas/blob/main/images/portfolio/ipad-main.png?raw=true)
+![Main Desktop View](https://github.com/gyakhoe/repo-datas/blob/main/images/portfolio/desktop-main.png?raw=true)
+
 ## Credits
 Desing inspiration from : http://brittanychiang.com/  
 Loading GIF from: https://media.giphy.com/media/FaAxdPWZ7HKGmlnku7/giphy.gif
+
+
+### Very God CLI Details
 
 ![coverage][coverage_badge]
 [![style: very good analysis][very_good_analysis_badge]][very_good_analysis_link]
