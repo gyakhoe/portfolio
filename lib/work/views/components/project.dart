@@ -78,15 +78,17 @@ class Project extends StatelessWidget {
                   children: [
                     Text(
                       featuredProjectTitle,
-                      style: Theme.of(context).textTheme.headline5?.copyWith(
-                            color: Colors.white,
-                          ),
+                      style:
+                          Theme.of(context).textTheme.headlineSmall?.copyWith(
+                                color: Colors.white,
+                              ),
                     ),
                     Text(
                       projectName,
-                      style: Theme.of(context).textTheme.headline4!.copyWith(
-                            color: Colors.white,
-                          ),
+                      style:
+                          Theme.of(context).textTheme.headlineMedium!.copyWith(
+                                color: Colors.white,
+                              ),
                     ),
                     Container(
                       padding: const EdgeInsets.all(5),
@@ -96,7 +98,7 @@ class Project extends StatelessWidget {
                         projectDetail,
                         maxLines: 3,
                         overflow: TextOverflow.ellipsis,
-                        style: Theme.of(context).textTheme.bodyText1?.copyWith(
+                        style: Theme.of(context).textTheme.bodyLarge?.copyWith(
                               color: Colors.white,
                             ),
                       ),
@@ -115,7 +117,7 @@ class Project extends StatelessWidget {
                         FontAwesomeIcons.arrowUpRightFromSquare,
                         color: Colors.white,
                       ),
-                    )
+                    ),
                   ],
                 ),
               ),

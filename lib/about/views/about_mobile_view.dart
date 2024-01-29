@@ -23,7 +23,7 @@ class AboutMobileView extends StatelessWidget {
         children: [
           Text(
             _l10n.aboutMeTitle,
-            style: Theme.of(context).textTheme.headline4?.copyWith(
+            style: Theme.of(context).textTheme.headlineMedium?.copyWith(
                   color: Colors.white,
                 ),
           ),
@@ -37,7 +37,7 @@ class AboutMobileView extends StatelessWidget {
             padding: const EdgeInsets.all(5),
             child: Text(
               _l10n.aboutMeDetail,
-              style: Theme.of(context).textTheme.bodyText1?.copyWith(
+              style: Theme.of(context).textTheme.bodyLarge?.copyWith(
                     color: Colors.white,
                     fontSize: 15,
                   ),
@@ -47,7 +47,7 @@ class AboutMobileView extends StatelessWidget {
             context: context,
             l10n: _l10n,
             height: 400,
-          )
+          ),
           // AboutMeImage(context: context, l10n: _l10n),
         ],
       ),

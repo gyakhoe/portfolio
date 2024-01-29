@@ -22,7 +22,7 @@ class ExperienceTabView extends StatelessWidget {
               l10n.experienceTitle,
               style: Theme.of(context)
                   .textTheme
-                  .headline2
+                  .displayMedium
                   ?.copyWith(color: Colors.white),
             ),
           ),

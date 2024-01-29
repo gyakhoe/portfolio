@@ -36,7 +36,7 @@ class MainDesktopView extends StatelessWidget {
             _l10n.mainNameTitle,
             style: Theme.of(context)
                 .textTheme
-                .headline1
+                .displayLarge
                 ?.copyWith(color: Colors.white),
           ),
           Padding(
@@ -51,7 +51,7 @@ class MainDesktopView extends StatelessWidget {
           ),
           Text(
             _l10n.mainWorkDetailTitle,
-            style: Theme.of(context).textTheme.headline5?.copyWith(
+            style: Theme.of(context).textTheme.headlineSmall?.copyWith(
                   color: Colors.white,
                   wordSpacing: 5,
                 ),
@@ -80,7 +80,7 @@ class MainDesktopView extends StatelessWidget {
                     .copyWith(color: Colors.white),
               ),
             ),
-          )
+          ),
         ],
       ),
     );
