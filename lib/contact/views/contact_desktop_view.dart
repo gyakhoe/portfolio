@@ -49,7 +49,7 @@ class ContactDesktopView extends StatelessWidget {
             child: Text(
               l10n.contactExplaination,
               textAlign: TextAlign.center,
-              style: Theme.of(context).textTheme.bodyText1?.copyWith(
+              style: Theme.of(context).textTheme.bodyLarge?.copyWith(
                     color: Colors.white,
                     fontSize: 20,
                   ),
@@ -77,7 +77,7 @@ class ContactDesktopView extends StatelessWidget {
                   style: isMobileView(context: context)
                       ? Theme.of(context)
                           .textTheme
-                          .bodyText1
+                          .bodyLarge
                           ?.copyWith(color: Colors.white)
                       : Theme.of(context).textTheme.headlineSmall?.copyWith(
                             color: Colors.white,
@@ -85,7 +85,7 @@ class ContactDesktopView extends StatelessWidget {
                 ),
               ),
             ),
-          )
+          ),
         ],
       ),
     );

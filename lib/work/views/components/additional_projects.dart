@@ -31,7 +31,7 @@ class AdditionalProject extends StatelessWidget {
             color: Colors.white,
             blurRadius: 5,
             blurStyle: BlurStyle.outer,
-          )
+          ),
         ],
       ),
       padding: const EdgeInsets.all(10),
@@ -70,7 +70,7 @@ class AdditionalProject extends StatelessWidget {
                 projectDetail,
                 overflow: TextOverflow.ellipsis,
                 maxLines: 3,
-                style: Theme.of(context).textTheme.bodyText1!.copyWith(
+                style: Theme.of(context).textTheme.bodyLarge!.copyWith(
                       color: Colors.white,
                     ),
               ),
@@ -78,7 +78,7 @@ class AdditionalProject extends StatelessWidget {
           ),
           Text(
             technologies,
-            style: Theme.of(context).textTheme.bodyText2!.copyWith(
+            style: Theme.of(context).textTheme.bodyMedium!.copyWith(
                   color: Colors.white,
                 ),
           ),

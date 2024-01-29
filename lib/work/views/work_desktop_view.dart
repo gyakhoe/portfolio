@@ -78,7 +78,7 @@ class WorkDesktopView extends StatelessWidget {
                 children: additionalProjects(context, l10n),
               ),
             ),
-          )
+          ),
         ],
       ),
     );

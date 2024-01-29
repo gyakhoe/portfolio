@@ -43,7 +43,7 @@ class FooterDesktopView extends StatelessWidget {
                 color: Colors.white,
               ),
             ),
-          )
+          ),
         ],
       ),
     );

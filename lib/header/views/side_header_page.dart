@@ -46,7 +46,7 @@ class SiderHeaderPage extends StatelessWidget {
                         ),
                       ),
                     ),
-                  )
+                  ),
                 ],
               )
             : Column(
@@ -54,7 +54,7 @@ class SiderHeaderPage extends StatelessWidget {
                   _headerVerticalDivider(),
                   Column(
                     children: socialWidget(l10n: l10n),
-                  )
+                  ),
                 ],
               ),
       ),

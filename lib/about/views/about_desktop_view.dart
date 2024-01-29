@@ -30,7 +30,7 @@ class AboutMeDekstopView extends StatelessWidget {
                 l10n.aboutMeTitle,
                 style: Theme.of(context)
                     .textTheme
-                    .headline4
+                    .headlineMedium
                     ?.copyWith(color: Colors.white),
               ),
               const Expanded(
@@ -52,7 +52,7 @@ class AboutMeDekstopView extends StatelessWidget {
                   l10n.aboutMeDetail,
                   style: Theme.of(context)
                       .textTheme
-                      .bodyText1!
+                      .bodyLarge!
                       .copyWith(color: Colors.white, fontSize: 18),
                 ),
               ),
@@ -61,9 +61,9 @@ class AboutMeDekstopView extends StatelessWidget {
                 l10n: l10n,
                 height: 500,
                 width: MediaQuery.of(context).size.width * 0.3,
-              )
+              ),
             ],
-          )
+          ),
         ],
       ),
     );

@@ -31,14 +31,14 @@ class MainTabView extends StatelessWidget {
             _l10n.mainNameTitle,
             style: Theme.of(context)
                 .textTheme
-                .headline2
+                .displayMedium
                 ?.copyWith(color: Colors.white),
           ),
           Padding(
             padding: const EdgeInsets.all(10),
             child: Text(
               _l10n.mainWorkTitle,
-              style: Theme.of(context).textTheme.headline4?.copyWith(
+              style: Theme.of(context).textTheme.headlineMedium?.copyWith(
                     color: Colors.white,
                     letterSpacing: 10,
                   ),
@@ -46,7 +46,7 @@ class MainTabView extends StatelessWidget {
           ),
           Text(
             _l10n.mainWorkDetailTitle,
-            style: Theme.of(context).textTheme.headline6?.copyWith(
+            style: Theme.of(context).textTheme.titleLarge?.copyWith(
                   color: Colors.white,
                 ),
           ),
@@ -76,7 +76,7 @@ class MainTabView extends StatelessWidget {
                     ?.copyWith(color: Colors.white),
               ),
             ),
-          )
+          ),
         ],
       ),
     );

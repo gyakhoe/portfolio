@@ -69,7 +69,7 @@ class WorkTabView extends StatelessWidget {
               margin: const EdgeInsets.all(20),
               child: ListView(children: additionalProjects(context, l10n)),
             ),
-          )
+          ),
         ],
       ),
     );

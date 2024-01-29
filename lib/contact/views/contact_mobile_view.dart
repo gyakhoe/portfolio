@@ -44,7 +44,7 @@ class ContactMobileView extends StatelessWidget {
             child: Text(
               l10n.contactExplaination,
               textAlign: TextAlign.center,
-              style: Theme.of(context).textTheme.bodyText1?.copyWith(
+              style: Theme.of(context).textTheme.bodyLarge?.copyWith(
                     color: Colors.white,
                     fontSize: 15,
                   ),
@@ -71,12 +71,12 @@ class ContactMobileView extends StatelessWidget {
                   l10n.contactButtonText,
                   style: Theme.of(context)
                       .textTheme
-                      .bodyText1
+                      .bodyLarge
                       ?.copyWith(color: Colors.white),
                 ),
               ),
             ),
-          )
+          ),
         ],
       ),
     );

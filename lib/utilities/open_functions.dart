@@ -113,6 +113,6 @@ List<Widget> additionalProjects(
       projectName: l10n.workFlutterChatTitle,
       projectDetail: l10n.workFlutterChatDetail,
       technologies: l10n.workFlutterChatTechnologies,
-    )
+    ),
   ];
 }
