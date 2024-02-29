@@ -12,10 +12,10 @@ class HomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     final l10n = context.l10n;
     return Scaffold(
-      drawer: Drawer(
-        backgroundColor: Theme.of(context).primaryColorDark,
-        child: ListView(children: navItems(context: context)),
-      ),
+      // drawer: Drawer(
+      //   backgroundColor: Theme.of(context).primaryColorDark,
+      //   child: ListView(children: navItems(context: context)),
+      // ),
       appBar: AppBar(
         toolbarHeight: MediaQuery.of(context).size.width <= kMobileMaxWidth
             ? 56
@@ -32,9 +32,9 @@ class HomePage extends StatelessWidget {
             fontWeight: FontWeight.bold,
           ),
         ),
-        actions: MediaQuery.of(context).size.width <= kTabletMaxWidth
-            ? []
-            : navItems(context: context),
+        // actions: MediaQuery.of(context).size.width <= kTabletMaxWidth
+        //     ? []
+        //     : navItems(context: context),
       ),
       body: SizedBox(
         width: MediaQuery.of(context).size.width,
