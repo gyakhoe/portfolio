@@ -90,7 +90,7 @@
         "description": "Name of the tibtube project"
     },
     "@@locale": "en",
-    "workTibtubeUrl": "www.tibtube.com",
+    "workTibtubeUrl": "https://tibflix.firebaseapp.com",
     "@workTibtubeUrl": {
         "description": "Url of tibtube project"
     },
